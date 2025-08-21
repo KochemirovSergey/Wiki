@@ -1,0 +1,50 @@
+/* Кастомные стили для русской документации */
+
+/* Улучшение отображения таблиц */
+.wy-table-responsive table td,
+.wy-table-responsive table th {
+    white-space: normal !important;
+    vertical-align: top;
+    padding: 8px;
+}
+
+/* Лучшее отображение русского текста */
+body {
+    font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Стили для глоссария */
+dl.glossary dt {
+    font-weight: bold;
+    color: #2980b9;
+    margin-top: 1em;
+}
+
+dl.glossary dd {
+    margin-left: 2em;
+    margin-bottom: 1em;
+}
+
+/* Улучшение отображения ссылок на глоссарий */
+.glossary-term {
+    color: #2980b9;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Стили для заголовков */
+h1, h2, h3, h4, h5, h6 {
+    font-family: "PT Sans", "Helvetica Neue", Arial, sans-serif;
+    font-weight: bold;
+}
+
+/* Отступы для русского текста */
+.document {
+    max-width: none;
+}
+
+/* Стили для кода */
+code, pre {
+    font-family: "Source Code Pro", "Consolas", monospace;
+}
