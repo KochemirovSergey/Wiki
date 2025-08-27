@@ -21,28 +21,29 @@
 
    naznachenie
    uses_case
-   academ
+   analog
 
 .. toctree::
    :maxdepth: 3
    :numbered:
    :caption: Техническая реализация
 
+   academ
    prototype
-   plan
 
 .. toctree::
    :maxdepth: 2
-   :caption: Внутренние документы
+   :caption: Задачи и организация
 
    inhouse
+   plan
+
 
 .. toctree::
    :maxdepth: 2
    :caption: Справочные материалы
 
    glossary
-   beautiful_tables
 
 Индексы и таблицы
 =================

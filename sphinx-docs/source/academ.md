@@ -1,5 +1,11 @@
 # Академическое обоснование
 
+## Постановка задачи
+
+![Слайд 2](_static/presentation_2.png)
+![Слайд 3](_static/presentation_3.png)
+![Слайд 4](_static/presentation_4.png)
+
 ## Показатели повышения точности и производительности
 
 **1. [GraphRAG](glossary.md#технологии-работы-с-данными) для образовательной аналитики:**
@@ -65,6 +71,7 @@
 
 2. **COT Collection** ([EMNLP 2023](https://aclanthology.org/2023.emnlp-main.782.pdf)): chain-of-thought подходы улучшают reasoning на 25-40%
 
+![Слайд 5](_static/presentation_5.png)
 
 ## Параметры системы
 1) **Перечень обрабатываемых источников данных**
