@@ -1,8 +1,6 @@
 # Аналоги и референсы
 
-# Аналоги
-
-![Слайд 8](_static/presentation_8.png)
+## Аналоги
 
 
 |Название (ссылка)                                                                    |Страна происхождения                                                                               |Основная научная  тематика              |Доступность              |Тип системы                                                                               |Форматы данных                                                                             |Функции                                                                                          |Размер базы данных                                                                              |Целевая аудитория                                                                                                                                                                                                                                                                     |Специализация                                                                                                                                     |
@@ -59,7 +57,7 @@ https://colab.ws/
 https://cyberleninka.ru/
 
 
-# Референсы дашбордов
+## Референсы дашбордов
 
 https://issekdash.hse.ru/viewer/public?dashboardGuid=f1b4484eecee40699e1036e6033125cb
 https://bi.gks.ru/biportal/contourbi.jsp?allsol=1&solution=Dashboard&project=%2FDashboard%2FStatistics_of_education_science_innovation_copy
