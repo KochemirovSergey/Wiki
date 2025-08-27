@@ -115,22 +115,29 @@ https://github.com/KochemirovSergey/agent_analitics
 ![Детальная схема А3-4](_static/A3-4.png)
 
 
-## Референсы по дашбордам
-
-https://issekdash.hse.ru/viewer/public?dashboardGuid=f1b4484eecee40699e1036e6033125cb
-https://bi.gks.ru/biportal/contourbi.jsp?allsol=1&solution=Dashboard&project=%2FDashboard%2FStatistics_of_education_science_innovation_copy
-https://visjs.github.io/vis-network/examples/network/data/scalingCustom.html
-https://www.hse.ru/primarydata/io
+## Целевая архитектура системы
 
 
-![Референс 1](_static/reference_1.png)
-![Референс 2](_static/reference_2.png)
-![Референс 3](_static/reference_3.png)
-![Референс 4](_static/reference_4.png)
-![Референс 5](_static/reference_5.png)
-![Референс 6](_static/reference_6.png)
-![Референс 7](_static/reference_7.png)
-![Референс 8](_static/reference_8.png)
-![Референс 9](_static/reference_9.png)
-![Референс 10](_static/reference_10.png)
-![Референс 11](_static/reference_11.png)
+![Референс 1](_static/presentation_6.png)
+
+
+```mermaid
+flowchart LR
+ subgraph g1["Прогнозно-аналитическая мультиагентная ИИ система анализа социально-экономических показателей сферы образования"]
+        n1["Графовая БД"]--1 Получает данные для ответа за запрос-->g5
+         subgraph g5["Агент аналитик </br> инструменты"]
+            n4[Подбор или расчет индекса в соотвествии с запросом]
+            n5[Построение динамического дашборда по реквизитам индекса]
+            n6[Расчет прогноза динамики данных]
+         end
+         subgraph g3["Агент парсер </br> инструменты"]
+            n7[Обработка таблицы]
+            n8[Поиск в интеренете]
+            n9[Обработка текста]
+         end
+        g3--1 Добавляет данные поиска в интернете-->n1
+        g5--1 Если в БД нет данных-->g3
+        g3--2 Ежегодная обработка статистических данных-->n1
+
+  end
+```
