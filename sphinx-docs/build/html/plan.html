@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>2. План реализации проекта &mdash; документация Прогнозно-аналитическая ИИ система 1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-2.3.0/datatables.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=f8c9c462" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=9ca2116e"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+      <script type="module">
+mermaid.initialize({
+    theme: 'default',
+    themeVariables: {
+        primaryColor: '#f39c12',
+        primaryTextColor: '#2c3e50',
+        primaryBorderColor: '#e74c3c',
+        lineColor: '#34495e',
+        secondaryColor: '#ecf0f1',
+        tertiaryColor: '#fff'
+    },
+    startOnLoad: true,
+    flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true
+    }
+});
+</script>
+      <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+      <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
+      <script src="https://cdn.datatables.net/v/dt/dt-2.3.0/datatables.min.js"></script>
+      <script src="_static/activate_datatables.js?v=eec09f64"></script>
+      <script src="_static/table-interactions.js?v=59f39348"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="Закрытый раздел" href="inhouse.html" />
+    <link rel="prev" title="1. Текущий задел" href="prototype.html" />
+ 
+<script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: 'default',
+        themeVariables: {
+            primaryColor: '#f39c12',
+            primaryTextColor: '#2c3e50',
+            primaryBorderColor: '#e74c3c',
+            lineColor: '#34495e',
+            secondaryColor: '#ecf0f1',
+            tertiaryColor: '#fff'
+        },
+        flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true
+        }
+    });
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Прогнозно-аналитическая ИИ система
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Обзор системы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="naznachenie.html">1. Назначение системы (основные функции)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id2">1.1. Основные потребительские качества</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id3">1.2. <strong>Анализ неструктурированных данных</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#neo4j">1.3. <strong>Графовая база данных Neo4j</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="naznachenie.html#id4">1.3.1. <strong>Построение полного индекса</strong> (на основе всех количественных данных в БД)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="naznachenie.html#id5">1.3.2. <strong>Прогнозная модель</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id6">1.4. <strong>Поиск количественных данных</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id7">1.5. <strong>Анализ и рекомендации</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="naznachenie.html#id8">1.5.1. Архитектура мультиагентой ИИ системы</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uses_case.html">2. Сценарии использования</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id2">2.1. Сценарий 1: Федеральное министерство планирует образовательную политику</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id3">2.2. Сценарий 2: Исследовательский консорциум проводит научный анализ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id4">2.3. Сценарий 3: Региональное управление образованием оптимизирует ресурсы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id5">2.4. Сценарий 4: Образовательная организация развивает программы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id6">2.5. Сценарий 5: Гражданин ищет образовательные возможности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id7">2.6. Аналоги и их ограничения</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="academ.html">3. Академическое обоснование</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="academ.html#id2">3.1. Показатели повышения точности и производительности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="academ.html#id3">3.2. Конкретные исследования</a></li>
+<li class="toctree-l2"><a class="reference internal" href="academ.html#id4">3.3. Параметры системы</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Техническая реализация</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="prototype.html">1. Текущий задел</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prototype.html#id2">1.1. Прототип 1 (общий) – основные функции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prototype.html#id3">1.2. Прототип 2 – агент-аналитик</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="prototype.html#id4">1.2.1. Сриншоты прототипа</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prototype.html#id5">1.2.2. Референсы по дашбордам</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. План реализации проекта</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">2.1. Долгосрочный план (2026-2029)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2.2. Среднесрочный план (2026-2027)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Внутренние документы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="inhouse.html">Закрытый раздел</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id2">Процессы взаимодействия ролей</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id3">Схема ответственности и взаимодействия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id4">Волонтерская модель развития</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Справочные материалы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Глоссарий</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html#id2">Научные термины</a></li>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html#id5">Термины графовой БД</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="beautiful_tables.html">Примеры красивых таблиц</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id2">1. Базовая интерактивная таблица</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id3">2. Таблица с цветными статусами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id4">3. Сложная таблица с финансовыми показателями</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id5">4. Свертываемая таблица с техническими характеристиками</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id6">5. Таблица сравнения конкурентов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id7">6. Таблица с дорожной картой проекта</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id8">Инструкции по использованию</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id9">7. Таблица с расширенными фильтрами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id10">8. Таблица с группировкой и сворачиванием строк</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id11">9. Интерактивная таблица с поиском и множественными фильтрами</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Прогнозно-аналитическая ИИ система</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">2. </span>План реализации проекта</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/plan.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><span class="section-number">2. </span>План реализации проекта<a class="headerlink" href="#id1" title="Ссылка на этот заголовок"></a></h1>
+<p>Комплексный план развертывания прогнозно-аналитической мультиагентной ИИ системы на период 2026-2029 годы.</p>
+<section id="id2">
+<h2><span class="section-number">2.1. </span>Долгосрочный план (2026-2029)<a class="headerlink" href="#id2" title="Ссылка на этот заголовок"></a></h2>
+<pre  class="mermaid">
+        gantt
+    title Календарный план выполнения проекта (2026–2029)
+    dateFormat  YYYY-MM
+
+    section Основная разработка
+    Подготовка первой версии                                        :active, stage1,  2026-01, 90d
+    Проверка качества, подготовка к промышленной эксплуатации       :stage2,  2026-04, 90d
+    Разработка прогнозной модели                                    :stage3,  2026-07, 90d
+    Обработка всех типов текстовых источников                       :stage4,  2026-10, 90d
+
+    section Прототипирование
+    Разработка прототипа                                            :stage5,  2027-01, 90d
+    Обработка полного набора текстов                                :stage6,  2027-04, 90d
+    Обработка учебных планов                                        :stage7,  2027-07, 90d
+    Обработка НПА                                                   :stage8,  2027-10, 90d
+
+    section Расширение функциональности
+    Обработка научных статей                                        :stage9,  2028-01, 90d
+    Расширение БД до нескольких онтологий                           :stage10, 2028-04, 90d
+    Разработка прототипа для домена Наука                           :stage11, 2028-07, 90d
+    Создание глубокой аналитики на основе пересечения доменов       :stage12, 2028-10, 90d
+
+    section Финальная интеграция
+    Разработка прототипа аналитики                                  :stage13, 2029-01, 90d
+    Создание мультионтологичной оркестрации агентов                 :stage14, 2029-04, 90d
+    Подготовка методологии для объединения данных доменов           :stage15, 2029-07, 90d
+    Разработка агентов специальных доменов знаний                   :stage16, 2029-10, 90d
+    </pre></section>
+<section id="id3">
+<h2><span class="section-number">2.2. </span>Среднесрочный план (2026-2027)<a class="headerlink" href="#id3" title="Ссылка на этот заголовок"></a></h2>
+<pre  class="mermaid">
+        gantt
+    title Детализированный план работ (2026–2027)
+    dateFormat  YYYY-MM
+
+
+    section Агент парсер
+    Разработка модуля ETL  :done, etl,        2026-01, 14d
+    Натройка модуля OCR для нецифровых данных                                                    :ocr,        2026-02, 7d
+    Настройка модуля парсера web страниц                                                         :webparser,  2026-02, 7d
+    Разработка инструмента чтения и записи в БД                                                  :done, dbio,             2026-01, 14d
+    Разработка модуля nlp обработки документов                                  :nlp-extract,      2026-03, 30d
+    Разработка инстурмента поиска и обработки информации из интернете                     :web-search,         2026-04, 21d
+    Парсинг документов из телеграм-чатов по указанию                                             :telegram-parse,   2026-06, 14d
+
+    section Агент аналитик
+    Определение типовых графиков для динамического дашборда                                      :analytics1,       2026-03, 30d
+    Формирование типовых индексов                                                                :analytics3,       2026-02, 30d
+    Создание алгоритмов построения полного индекса :full-index,       2026-03, 45d
+    Модуль построение прогноза по показателю                     :forecast,          2026-05, 21d
+    Разработка инструмента конкурентного анализа             :market-analysis,  2026-07, 21d
+    Разработка иструмента построение дашбоарда                :visualization,    2026-06, 30d
+
+
+    section Графовая БД
+    Обработка статистических форм из коллекции открытых данных                                   :graphdb,          2026-04, 30d
+    Векторные embedding для поиска похожих сущностей и GraphRAG                                  :embeddings,       2026-05, 7d
+    Обработка списка образовательных организаций                                                 :listorg,       2026-05, 21d
+    Обработка НПА (нормативно-правовых актов) - архивные СССР и действующие РФ                   :npa-processing,   2026-06, 60d
+    Обработка научных статей для онтологий (60,000+ статей)                                     :scientific-articles, 2026-06, 45d
+
+    section Прогнозная модель
+    Обработка пропущенных значений                                                               :forecast-miss,    2026-05, 7d
+    Агрегация и нормализация рядов                                                               :forecast-agg,     2026-05, 21d
+    Инженерия признаков                                                                          :forecast-eng,     2026-06, 30d
+    Обучение моделей                                                                            :forecast-train,   2026-06, 45d
+    Ансамблирование моделей                                                                     :forecast-ens,     2026-07, 30d
+    Валидация и оптимизация                                                                     :forecast-val,     2026-08, 14d
+
+    section Общие задачи
+    Проектирование архитектуры мультиагентной системы                                            :done, architecture,     2026-01, 20d
+    Разработка на LangGraph. Узлы агентов и workflow                                    :langgraph,        2026-02, 45d
+    Телеграмм бот для формирования запросов пользователями                                       :bot,              2026-06, 30d
+    Веб сервер для интерактивных дашбордов и аналитики                                          :webserver,        2026-05, 30d
+    Тестирование системы и компонентов                                                             :test,             2026-08, 30d
+    Подготовка докер контейнера для локального развертывания                                     :docker,             2026-09, 30d
+    Разработка технической документации и руководств                                             :documentation,    2026-09, 21d
+    Развертывание системы на продакшн сервере                                                    :deployment,       2026-10, 14d
+    </pre></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="prototype.html" class="btn btn-neutral float-left" title="1. Текущий задел" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="inhouse.html" class="btn btn-neutral float-right" title="Закрытый раздел" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, СССО. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Найти все блоки с классом mermaid и инициализировать их
+        const mermaidBlocks = document.querySelectorAll('pre.mermaid');
+        mermaidBlocks.forEach(function(block) {
+            // Создать div элемент вместо pre
+            const div = document.createElement('div');
+            div.className = 'mermaid';
+            div.innerHTML = block.textContent;
+            
+            // Заменить pre на div
+            block.parentNode.replaceChild(div, block);
+        });
+        
+        // Перезапустить mermaid
+        mermaid.init();
+    });
+</script>
+
+
+</body>
+</html>

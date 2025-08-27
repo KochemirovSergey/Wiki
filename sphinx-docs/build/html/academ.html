@@ -1,0 +1,480 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3. Академическое обоснование &mdash; документация Прогнозно-аналитическая ИИ система 1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-2.3.0/datatables.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=f8c9c462" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=9ca2116e"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
+      <script src="https://cdn.datatables.net/v/dt/dt-2.3.0/datatables.min.js"></script>
+      <script src="_static/activate_datatables.js?v=eec09f64"></script>
+      <script src="_static/table-interactions.js?v=59f39348"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="1. Текущий задел" href="prototype.html" />
+    <link rel="prev" title="2. Сценарии использования" href="uses_case.html" />
+ 
+<script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: 'default',
+        themeVariables: {
+            primaryColor: '#f39c12',
+            primaryTextColor: '#2c3e50',
+            primaryBorderColor: '#e74c3c',
+            lineColor: '#34495e',
+            secondaryColor: '#ecf0f1',
+            tertiaryColor: '#fff'
+        },
+        flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true
+        }
+    });
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Прогнозно-аналитическая ИИ система
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Обзор системы</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="naznachenie.html">1. Назначение системы (основные функции)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id2">1.1. Основные потребительские качества</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id3">1.2. <strong>Анализ неструктурированных данных</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#neo4j">1.3. <strong>Графовая база данных Neo4j</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="naznachenie.html#id4">1.3.1. <strong>Построение полного индекса</strong> (на основе всех количественных данных в БД)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="naznachenie.html#id5">1.3.2. <strong>Прогнозная модель</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id6">1.4. <strong>Поиск количественных данных</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id7">1.5. <strong>Анализ и рекомендации</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="naznachenie.html#id8">1.5.1. Архитектура мультиагентой ИИ системы</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uses_case.html">2. Сценарии использования</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id2">2.1. Сценарий 1: Федеральное министерство планирует образовательную политику</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id3">2.2. Сценарий 2: Исследовательский консорциум проводит научный анализ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id4">2.3. Сценарий 3: Региональное управление образованием оптимизирует ресурсы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id5">2.4. Сценарий 4: Образовательная организация развивает программы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id6">2.5. Сценарий 5: Гражданин ищет образовательные возможности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id7">2.6. Аналоги и их ограничения</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. Академическое обоснование</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">3.1. Показатели повышения точности и производительности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3.2. Конкретные исследования</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">3.3. Параметры системы</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Техническая реализация</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="prototype.html">1. Текущий задел</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prototype.html#id2">1.1. Прототип 1 (общий) – основные функции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prototype.html#id3">1.2. Прототип 2 – агент-аналитик</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="prototype.html#id4">1.2.1. Сриншоты прототипа</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prototype.html#id5">1.2.2. Референсы по дашбордам</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plan.html">2. План реализации проекта</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plan.html#id2">2.1. Долгосрочный план (2026-2029)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan.html#id3">2.2. Среднесрочный план (2026-2027)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Внутренние документы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="inhouse.html">Закрытый раздел</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id2">Процессы взаимодействия ролей</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id3">Схема ответственности и взаимодействия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id4">Волонтерская модель развития</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Справочные материалы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Глоссарий</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html#id2">Научные термины</a></li>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html#id5">Термины графовой БД</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="beautiful_tables.html">Примеры красивых таблиц</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id2">1. Базовая интерактивная таблица</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id3">2. Таблица с цветными статусами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id4">3. Сложная таблица с финансовыми показателями</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id5">4. Свертываемая таблица с техническими характеристиками</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id6">5. Таблица сравнения конкурентов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id7">6. Таблица с дорожной картой проекта</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id8">Инструкции по использованию</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id9">7. Таблица с расширенными фильтрами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id10">8. Таблица с группировкой и сворачиванием строк</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id11">9. Интерактивная таблица с поиском и множественными фильтрами</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Прогнозно-аналитическая ИИ система</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">3. </span>Академическое обоснование</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/academ.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><span class="section-number">3. </span>Академическое обоснование<a class="headerlink" href="#id1" title="Ссылка на этот заголовок"></a></h1>
+<section id="id2">
+<h2><span class="section-number">3.1. </span>Показатели повышения точности и производительности<a class="headerlink" href="#id2" title="Ссылка на этот заголовок"></a></h2>
+<p><strong>1. <a class="reference internal" href="glossary.html#технологии-работы-с-данными"><span class="std std-ref">GraphRAG</span></a> для образовательной аналитики:</strong></p>
+<ul class="simple">
+<li><p>Повышение точности ответов <strong>на 25-40%</strong> по сравнению с традиционными подходами</p></li>
+<li><p>Точность извлечения фактов: <strong>92%+</strong> (GraphRAG-Bench показывает 89-94% для различных доменов)</p></li>
+<li><p>Снижение галлюцинаций: <strong>до 15%</strong> ложных утверждений (базовый <a class="reference internal" href="glossary.html#технологии-работы-с-данными"><span class="std std-ref">RAG</span></a>: 25-30%)</p></li>
+</ul>
+<p><strong>2. <a class="reference internal" href="glossary.html#основные-технологии-искусственного-интеллекта"><span class="std std-ref">Few-shot</span></a> обучение для специализированных задач:</strong></p>
+<ul class="simple">
+<li><p>Адаптация к новым типам документов с <strong>85%+ точностью</strong> при использовании всего 10-20 примеров</p></li>
+<li><p>Скорость обучения новым задачам: <strong>в 5-10 раз быстрее</strong> по сравнению с традиционным supervised learning</p></li>
+</ul>
+<p><strong>3. Пространственно-временное моделирование с использованием региональных данных:</strong></p>
+<ul class="simple">
+<li><p>Увеличение качества <strong>федеральных и региональных прогнозов на 15-30%</strong> при использовании детализированных региональных данных в <a class="reference internal" href="glossary.html#основные-технологии-искусственного-интеллекта"><span class="std std-ref">ML</span></a>-моделях по сравнению с агрегированными подходами</p></li>
+<li><p>Точность краткосрочных прогнозов (1 год): <strong>MAPE &lt; 8%</strong> для федерального уровня, <strong>MAPE &lt; 12%</strong> для регионального</p></li>
+<li><p>Точность среднесрочных прогнозов (3 года): <strong>MAPE &lt; 15%</strong> для федерального уровня, <strong>MAPE &lt; 20%</strong> для регионального</p></li>
+</ul>
+<p><strong>4. <a class="reference internal" href="glossary.html#основные-технологии-искусственного-интеллекта"><span class="std std-ref">Агентные системы</span></a> с инструментами:</strong></p>
+<ul class="simple">
+<li><p>Решение сложных аналитических задач: <strong>точность 87-92%</strong> (API-Bank Benchmark, τ-Bench)</p></li>
+<li><p>Автоматизация <strong>80%+</strong> рутинных аналитических операций</p></li>
+<li><p>Время обработки запросов: <strong>сокращение в 3-5 раз</strong></p></li>
+</ul>
+<p><strong>5. Скорость обработки данных в графовой БД:</strong></p>
+<ul class="simple">
+<li><p>Обработка запросов к связанным данным: <strong>в 10-100 раз быстрее</strong> по сравнению с реляционными БД для сложных аналитических запросов</p></li>
+<li><p>Поиск паттернов в больших объемах данных: <strong>время ответа &lt; 1 секунды</strong> для 90% запросов</p></li>
+</ul>
+</section>
+<section id="id3">
+<h2><span class="section-number">3.2. </span>Конкретные исследования<a class="headerlink" href="#id3" title="Ссылка на этот заголовок"></a></h2>
+<p><strong>Региональное моделирование для повышения точности федеральных прогнозов:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>ЦБ РФ - региональная инфляция</strong> (<a class="reference external" href="https://www.cbr.ru/statichtml/file/134578/wp_91.pdf">Исследование ЦБ РФ, 2020</a>): использование региональных данных улучшило качество <strong>федеральных</strong> прогнозов инфляции на 25%</p></li>
+<li><p><strong>Макроэкономические прогнозы США</strong> (<a class="reference external" href="https://files.stlouisfed.org/files/htdocs/publications/red/2008/01/Engemann.pdf">Engemann &amp; Owyang, 2008</a>): включение детализированных региональных факторов в <a class="reference internal" href="glossary.html#основные-технологии-искусственного-интеллекта"><span class="std std-ref">ML</span></a>-модели повысило точность <strong>национальных</strong> макроэкономических прогнозов на 20-35%</p></li>
+<li><p><strong>Энергетика и электроэнергия</strong> (<a class="reference external" href="https://link.springer.com/article/10.1007/s40518-025-00262-z">Renewable Energy, 2025</a>; <a class="reference external" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5208260">SSRN, 2024</a>): использование региональных данных потребления повысило точность <strong>общенациональных</strong> прогнозов на 18-28%</p></li>
+<li><p><strong>Климатическое моделирование</strong> (<a class="reference external" href="https://arxiv.org/pdf/2303.16301">arXiv:2303.16301</a>; <a class="reference external" href="https://journals.ametsoc.org/downloadpdf/view/journals/aies/3/4/AIES-D-23-0103.1.pdf">AIES Journal, 2024</a>): пространственно-детализированные данные температуры и осадков улучшили <strong>глобальные</strong> климатические прогнозы</p></li>
+</ol>
+<p><strong><a class="reference internal" href="glossary.html#технологии-работы-с-данными"><span class="std std-ref">GraphRAG</span></a> и точность ответов:</strong></p>
+<ol class="arabic simple">
+<li><p><strong><a class="reference internal" href="glossary.html#технологии-работы-с-данными"><span class="std std-ref">GraphRAG</span></a>-Bench</strong> (<a class="reference external" href="https://arxiv.org/pdf/2506.02404v1.pdf">arXiv:2506.02404</a>): комплексное тестирование показало превосходство <a class="reference internal" href="glossary.html#технологии-работы-с-данными"><span class="std std-ref">GraphRAG</span></a> на 15-35% по различным метрикам точности</p></li>
+<li><p><strong>AWS + Lettria демо</strong> (<a class="reference external" href="https://aws.amazon.com/ru/blogs/machine-learning/improving-retrieval-augmented-generation-accuracy-with-graphrag/">AWS ML Blog</a>): улучшение точности ответов на 30-45% для сложных аналитических запросов</p></li>
+<li><p><strong>Diffbot KG-LM Benchmark</strong> (<a class="reference external" href="https://www.falkordb.com/blog/graphrag-accuracy-diffbot-falkordb/">FalkorDB Blog</a>): <a class="reference internal" href="glossary.html#технологии-работы-с-данными"><span class="std std-ref">GraphRAG</span></a> показал точность 89-94% vs 65-78% для базового <a class="reference internal" href="glossary.html#технологии-работы-с-данными"><span class="std std-ref">RAG</span></a></p></li>
+</ol>
+<p><strong>Детекция галлюцинаций:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>HaluEval</strong> (<a class="reference external" href="https://arxiv.org/pdf/2304.10553.pdf">arXiv:2304.10553</a>): методы детекции галлюцинаций в <a class="reference internal" href="glossary.html#технологии-работы-с-данными"><span class="std std-ref">RAG</span></a>-системах снижают количество ложных утверждений с 25-30% до 10-15%</p></li>
+<li><p><strong>Self-CRAG</strong> (<a class="reference external" href="https://arxiv.org/pdf/2310.01352.pdf">arXiv:2310.01352</a>): самокоррекция в <a class="reference internal" href="glossary.html#технологии-работы-с-данными"><span class="std std-ref">RAG</span></a> улучшает точность на биографических данных на 22-28%</p></li>
+</ol>
+<p><strong>Агентные системы:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>API-Bank Benchmark</strong> (<a class="reference external" href="https://aclanthology.org/2023.emnlp-main.187/">EMNLP 2023</a>): агенты с инструментами показывают точность 85-92% в решении сложных задач</p></li>
+<li><p><strong>τ-Bench (Tool Agents)</strong> (<a class="reference external" href="https://huggingface.co/papers/2406.12045">arXiv:2406.12045</a>): специализированные агенты превосходят базовые модели на 35-50%</p></li>
+<li><p><strong>MLAgentBench</strong> (<a class="reference external" href="https://cs.stanford.edu/people/jure/pubs/mlagent-icml24.pdf">ICML 2024</a>): автоматизация <a class="reference internal" href="glossary.html#основные-технологии-искусственного-интеллекта"><span class="std std-ref">ML</span></a>-задач с точностью 78-87%</p></li>
+</ol>
+<p><strong><a class="reference internal" href="glossary.html#основные-технологии-искусственного-интеллекта"><span class="std std-ref">Few-shot</span></a> learning:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>LM-BFF Few-Shot</strong> (<a class="reference external" href="https://github.com/princeton-nlp/LM-BFF">Princeton NLP</a>): демонстрирует эффективное обучение на малых данных с точностью 80-90%</p></li>
+<li><p><strong>COT Collection</strong> (<a class="reference external" href="https://aclanthology.org/2023.emnlp-main.782.pdf">EMNLP 2023</a>): chain-of-thought подходы улучшают reasoning на 25-40%</p></li>
+</ol>
+</section>
+<section id="id4">
+<h2><span class="section-number">3.3. </span>Параметры системы<a class="headerlink" href="#id4" title="Ссылка на этот заголовок"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Перечень обрабатываемых источников данных</strong></p></li>
+</ol>
+<p><strong>Открытые данные:</strong></p>
+<ul class="simple">
+<li><p><strong>Статистические формы</strong> (основной массив количественных данных)</p>
+<ul>
+<li><p>Общее образование: ОО-1, ОО-2</p></li>
+<li><p>Среднее профессиональное образование: СПО-1, СПО-2</p></li>
+<li><p>Высшее образование: ВПО-1, ВПО-2</p></li>
+<li><p>Дополнительное образование: 1-ДОД, 1-НД, 1-КДН, 1-ОД</p></li>
+<li><p>Научная деятельность: 2-Наука, 2-Наука (краткая), 2-Наука (ИНВ), ЗП-наука, 4-Инновация</p></li>
+<li><p>Кадровая отчетность: 1-Т, 1-Т (условия), 1-Т (проф), П-4, П-4 (НЗ), 3-Ф</p></li>
+<li><p>Контроль и лицензирование: 1-контроль, 1-лицензирование</p></li>
+<li><p>Специализированные формы: 103-РИК, ПО (квартальная), 1-ПК (квартальная), 1-молодёжь (краткая, месячная)</p></li>
+</ul>
+</li>
+<li><p><strong>Сайты образовательных организаций</strong> - информация об учреждениях</p></li>
+<li><p><strong>НПА (нормативно-правовые акты)</strong></p>
+<ul>
+<li><p>Архивные НПА (исторические документы СССР)</p></li>
+<li><p>Действующие РФ (актуальная нормативная база)</p></li>
+</ul>
+</li>
+<li><p><strong>Научные данные</strong></p>
+<ul>
+<li><p>Отчеты ЕГИСУ НИОКТР</p></li>
+<li><p>Научные статьи</p></li>
+</ul>
+</li>
+</ul>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Источник данных</p></th>
+<th class="head"><p>Описание</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference external" href="https://rosstat.gov.ru/opendata">Федеральная служба государственной статистики (Росстат)</a></p></td>
+<td><p>Основной источник официальной государственной статистики РФ по всем сферам: демография, экономика, сельское хозяйство, социальная сфера. Более 50 наборов данных в машиночитаемых форматах</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://fedstat.ru">Единая межведомственная информационно-статистическая система (ЕМИСС)</a></p></td>
+<td><p>Межведомственная система с более 6000 показателей официальной статистики от всех федеральных органов власти</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://data.gov.ru">Портал открытых данных РФ</a></p></td>
+<td><p>Единый федеральный реестр открытых данных всех органов власти. Более 26000 наборов данных (9960 федеральных, 13169 региональных, 3689 муниципальных)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://minobrnauki.gov.ru/opendata">Министерство науки и высшего образования РФ</a></p></td>
+<td><p>Статистика высшего образования: численность студентов, образовательные программы, научная деятельность вузов, результаты проверок</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://obrnadzor.gov.ru/opendata">Федеральная служба по надзору в сфере образования и науки (Рособрнадзор)</a></p></td>
+<td><p>Данные по качеству образования, лицензированию образовательных организаций, государственному контролю в сфере образования</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://ras.ru">Российская академия наук (РАН)</a></p></td>
+<td><p>Отчеты о научной деятельности, фундаментальных исследованиях, важнейших научных достижениях российских ученых</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://hse.ru/primarydata">НИУ Высшая школа экономики (ВШЭ)</a></p></td>
+<td><p>Статистические сборники “Образование в цифрах”, “Наука и технологии”, социально-экономические исследования</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://issek.hse.ru">Институт статистических исследований и экономики знаний ВШЭ</a></p></td>
+<td><p>Статистика инноваций, НИОКР, образования, экономики знаний, рейтинги университетов</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://minzdrav.gov.ru/opendata">Министерство здравоохранения РФ</a></p></td>
+<td><p>Государственный реестр лекарственных средств, медицинские стандарты, статистика здравоохранения, клинические исследования</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://roszdravnadzor.gov.ru/opendata">Федеральная служба по надзору в сфере здравоохранения (Росздравнадзор)</a></p></td>
+<td><p>Реестры медицинских изделий, лицензии медицинских организаций, мониторинг качества лекарственных препаратов (28 наборов данных)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://opendata.mkrf.ru">Министерство культуры РФ</a></p></td>
+<td><p>Данные о культурных объектах: 18 тыс. учреждений культуры, 47 тыс. памятников, 2,8 млн музейных предметов, 21 тыс. прокатных удостоверений фильмов (62 набора)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://minsport.gov.ru/opendata">Министерство спорта РФ</a></p></td>
+<td><p>Статистика физической культуры и спорта, реестры спортивных федераций и объектов спорта, данные о массовых спортивных мероприятиях</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://mnr.gov.ru/opendata">Министерство природных ресурсов и экологии РФ</a></p></td>
+<td><p>Экологическая статистика: состояние окружающей среды, загрязнение атмосферы и воды, особо охраняемые природные территории (36 наборов данных)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://meteorf.gov.ru">Федеральная служба по гидрометеорологии (Росгидромет)</a></p></td>
+<td><p>Гидрометеорологические данные, состояние и загрязнение окружающей среды, климатические наблюдения</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://mvd.ru/opendata">Министерство внутренних дел РФ</a></p></td>
+<td><p>Статистика правонарушений, данные о деятельности полиции, административные правонарушения</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://mchs.gov.ru">Министерство по чрезвычайным ситуациям РФ</a></p></td>
+<td><p>Статистика чрезвычайных ситуаций, пожарная безопасность, государственные доклады о защите населения от ЧС</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://genproc.gov.ru/activity/statistics">Генеральная прокуратура РФ</a></p></td>
+<td><p>Статистические данные о преступности, прокурорском надзоре, состоянии законности</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://rosgvard.ru">Федеральная служба войск национальной гвардии (Росгвардия)</a></p></td>
+<td><p>Данные о деятельности войск национальной гвардии, контроль за оборотом оружия, частная охранная деятельность</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://mintrans.gov.ru/opendata">Министерство транспорта РФ</a></p></td>
+<td><p>Статистика транспорта: перевозки пассажиров и грузов, состояние дорожной инфраструктуры, транспортная мобильность (36 наборов данных)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://minfin.gov.ru">Министерство финансов РФ</a></p></td>
+<td><p>Бюджетная и налоговая статистика, государственный долг, межбюджетные отношения</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://cbr.ru/banking_sector">Центральный банк РФ</a></p></td>
+<td><p>Банковская статистика, данные о кредитных организациях, денежно-кредитная политика, платежная система</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://economy.gov.ru/material/open_data">Министерство экономического развития РФ</a></p></td>
+<td><p>Статистика экономического развития регионов, инвестиции, предпринимательство</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://digital.gov.ru/open-ministry/open-data">Министерство цифрового развития РФ</a></p></td>
+<td><p>Статистика цифровизации, информационные технологии, телекоммуникации</p></td>
+</tr>
+<tr class="row-odd"><td><p>Министерство социального развития (региональные)</p></td>
+<td><p>Социальная защита населения, меры социальной поддержки, демографические данные по регионам</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://data.mos.ru">Правительство Москвы</a></p></td>
+<td><p>Городская инфраструктура Москвы: транспорт, образование, здравоохранение, культура (более 1000 наборов данных)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Региональные порталы открытых данных</p></td>
+<td><p>Аналогичные московскому порталы в регионах: Татарстан, Ульяновская область, Сахалин, Пермский край и др.</p></td>
+</tr>
+<tr class="row-even"><td><p>Муниципальные порталы открытых данных</p></td>
+<td><p>Данные муниципального уровня: бюджеты, инфраструктура, госуслуги, транспорт</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://fom.ru">Фонд «Общественное мнение» (ФОМ)</a></p></td>
+<td><p>Результаты социологических исследований, данные опросов общественного мнения</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://wciom.ru">Всероссийский центр изучения общественного мнения (ВЦИОМ)</a></p></td>
+<td><p>Социологические исследования, электоральная статистика, общественное мнение</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://bank.isras.ru">Институт социологии РАН</a></p></td>
+<td><p>Архив социологических исследований, более 700 исследований для научного использования</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://openpolice.ru">Портал «Открытая полиция»</a></p></td>
+<td><p>Статистика деятельности правоохранительных органов, общественный контроль полиции</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://openbudget.gov.ru">Система управления общественными финансами</a></p></td>
+<td><p>Открытые бюджеты всех уровней, финансовые показатели исполнения бюджетов</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://datacatalogs.ru">Каталог каталогов открытых данных</a></p></td>
+<td><p>Сводный каталог российских и международных порталов открытых данных</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://cnb.dvo.ru">Центральная научная библиотека ДВО РАН</a></p></td>
+<td><p>Открытые научные данные Дальневосточного отделения РАН</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://inion.ru">Институт научной информации по общественным наукам РАН (ИНИОН)</a></p></td>
+<td><p>Библиографические базы данных по социальным и гуманитарным наукам (4 млн записей)</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference external" href="https://data.rcsi.science">Российский центр судебно-исследовательской экспертизы</a></p></td>
+<td><p>Наборы статистических данных для научного анализа, готовые датасеты</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference external" href="https://nalog.gov.ru">Федеральная налоговая служба РФ</a></p></td>
+<td><p>Налоговая статистика, данные о налогоплательщиках, поступлениях в бюджет</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Закрытые данные:</strong></p>
+<ul class="simple">
+<li><p>Государственные программы</p></li>
+<li><p>Отчеты о реализации стратегии</p></li>
+</ul>
+<p><strong>Дополнительные источники:</strong></p>
+<ul class="simple">
+<li><p>Парсинг документов из телеграм-чатов по указанию</p></li>
+<li><p>Обогащение данными из интернета и СМИ при необходимости</p></li>
+</ul>
+<ol class="arabic simple" start="2">
+<li><p><strong>Интерфейсы системы:</strong></p>
+<ul class="simple">
+<li><p>Телеграм бот для формирования запросов пользователями</p></li>
+<li><p>Веб-интерфейс для интерактивных дашбоардов и аналитики</p></li>
+</ul>
+</li>
+<li><p><strong>Технические характеристики:</strong></p>
+<ul class="simple">
+<li><p><strong>Точность извлечения фактов:</strong> 92%+ (GraphRAG-Bench)</p></li>
+<li><p><strong>Точность прогнозов:</strong></p>
+<ul>
+<li><p>Краткосрочные (1 год): MAPE &lt;8% федеральный, &lt;12% региональный уровень</p></li>
+<li><p>Среднесрочные (3 года): MAPE &lt;15% федеральный, &lt;20% региональный уровень</p></li>
+<li><p>Долгосрочные (до 10 лет): MAPE &lt;20% с учетом структурных изменений</p></li>
+</ul>
+</li>
+<li><p><strong>Повышение точности ответов:</strong> на 25-40% vs традиционные подходы (GraphRAG)</p></li>
+</ul>
+</li>
+</ol>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="uses_case.html" class="btn btn-neutral float-left" title="2. Сценарии использования" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="prototype.html" class="btn btn-neutral float-right" title="1. Текущий задел" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, СССО. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Найти все блоки с классом mermaid и инициализировать их
+        const mermaidBlocks = document.querySelectorAll('pre.mermaid');
+        mermaidBlocks.forEach(function(block) {
+            // Создать div элемент вместо pre
+            const div = document.createElement('div');
+            div.className = 'mermaid';
+            div.innerHTML = block.textContent;
+            
+            // Заменить pre на div
+            block.parentNode.replaceChild(div, block);
+        });
+        
+        // Перезапустить mermaid
+        mermaid.init();
+    });
+</script>
+
+
+</body>
+</html>

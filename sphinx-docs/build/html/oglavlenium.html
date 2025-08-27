@@ -6,10 +6,10 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Оглавление &mdash; документация Прогнозно-аналитическая ИИ система 1.0</title>
+  <title>1. Оглавление &mdash; документация Прогнозно-аналитическая ИИ система 1.0</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=7d1ae049" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=fc2992fd" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
@@ -20,7 +20,30 @@
       <script src="_static/translations.js?v=cd1d70c9"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
-    <link rel="search" title="Поиск" href="search.html" /> 
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="2. Назначение системы (основные функции)" href="naznachenie.html" />
+    <link rel="prev" title="Прогнозно-аналитическая мультиагентная ИИ система" href="index.html" />
+ 
+<script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: 'default',
+        themeVariables: {
+            primaryColor: '#f39c12',
+            primaryTextColor: '#2c3e50',
+            primaryBorderColor: '#e74c3c',
+            lineColor: '#34495e',
+            secondaryColor: '#ecf0f1',
+            tertiaryColor: '#fff'
+        },
+        flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true
+        }
+    });
+</script>
+
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -42,133 +65,77 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
-              <ul>
-<li class="toctree-l1"><a class="reference internal" href="1.html">1. 1. Участник отбора:</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="1.html#id2">1.1. 1.1. Название проекта</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.html#id3">1.2. 1.2. Фирменное наименование участника отбора:**</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.html#id4">1.3. 1.3. Распределение уставного капитала (учредители и доли):</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.html#id5">1.4. 1.4. Адрес предприятия:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.html#id6">1.5. 1.5. Сайт предприятия:**</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.html#id7">1.6. 1.6. Область деятельности, виды продукции и услуг:**</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.html#id8">1.7. 1.7. Фактическая выручка за 2022-2024 годы по годам:**</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Обзор системы</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Оглавление</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1.1. Нзначение системы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">1.2. Академическое обоснование</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">1.3. Сценарии использования</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">1.4. План реализации</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">1.5. Существующий задел</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">1.6. Закрытый раздел</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">1.7. Краткое описание проекта</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="2.1.html">2. 2.1. Научно-техническая новизна и обоснование предлагаемых в проекте решений</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.1.html#id2">2.1. Показатели повышения точности и производительности</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.1.html#id3">2.2. Научное обоснование с конкретными исследованиями</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.1.html#id4">2.3. Фундаментальная научная новизна</a></li>
+<li class="toctree-l1"><a class="reference internal" href="naznachenie.html">2. Назначение системы (основные функции)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id2">2.1. Основные потребительские качества</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id3">2.2. <strong>Анализ неструктурированных данных</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id4">2.3. <strong>Построение полного индекса</strong> (на основе всех количественных данных в БД)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id5">2.4. <strong>Прогнозная модель</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#neo4j">2.5. <strong>Графовая база данных Neo4j</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id6">2.6. <strong>Поиск количественных данных</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id7">2.7. <strong>Анализ и рекомендации</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="naznachenie.html#id8">2.7.1. Архитектура мультиагентой ИИ системы</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="2.2.html">3. 2.2. Создаваемый коммерческий продукт и его характеристики</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.2.html#id2">3.1. 2.2.1. Функциональное назначение</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2.html#id3">3.2. 2.2.2. Основные потребительские качества</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2.html#id4">3.3. 2.2.3. Параметры продукта</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="2.3.html">4. 2.3. Методы и способы решения поставленных задач</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.3.html#id2">4.1. Архитектура мультиагентой ИИ системы</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3.html#id3">4.2. Анализ неструктурированных данных</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3.html#id4">4.3. Построение полного индекса</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3.html#id5">4.4. Прогнозная модель</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3.html#id6">4.5. Поиск количественных данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="uses_case.html">3. Сценарии использования</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id2">3.1. Сценарий 1: Федеральное министерство планирует образовательную политику</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id3">3.2. Сценарий 2: Исследовательский консорциум проводит научный анализ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id4">3.3. Сценарий 3: Региональное управление образованием оптимизирует ресурсы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id5">3.4. Сценарий 4: Образовательная организация развивает программы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id6">3.5. Сценарий 5: Гражданин ищет образовательные возможности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id7">3.6. Аналоги и их ограничения</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="2.4.html">5. 2.4. Наименование и производитель планируемой к замещению продукции</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2.5.html">6. 2.5. Имеющийся у коллектива участника отбора научно-технический задел</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.5.html#id2">6.1. Прототип 1 (общий) – основные функции</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.5.html#id3">6.2. Прототип 2 – агент-аналитик</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.5.html#id4">6.3. Праваи на интеллектуальную собственность</a></li>
+<li class="toctree-l1"><a class="reference internal" href="academ.html">4. Академическое обоснование</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="academ.html#id2">4.1. Показатели повышения точности и производительности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="academ.html#id3">4.2. Конкретные исследования</a></li>
+<li class="toctree-l2"><a class="reference internal" href="academ.html#id4">4.3. Параметры системы</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="2.6.html">7. 2.6. Планы по созданию и защите интеллектуальной собственности</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.6.html#id2">7.1. Авторские права</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.6.html#id3">7.2. Стратегия защиты интеллектуальной собственности и технологического суверенитета</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Техническая реализация</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="prototype.html">1. Текущий задел</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prototype.html#id2">1.1. Прототип 1 (общий) – основные функции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prototype.html#id3">1.2. Прототип 2 – агент-аналитик</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="prototype.html#id4">1.2.1. Сриншоты прототипа</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="3.1.html">8. 3.1. Объем и емкость рынка продукта</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.1.html#edtech-science-ai-govtech">8.1. Сводная таблица отчетов по рынкам EdTech, Science AI и GovTech</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.1.html#id2">8.2. Статистика</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="3.2.html">9. 3.2. Сравнение технико-экономических характеристик создаваемого инновационного продукта с зарубежными и отечественными аналогами</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.2.html#id2">9.1. Аналоги по бизнес-модели:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.2.html#id3">9.2. Аналоги по используемым технологиям:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.2.html#id4">9.3. Аналоги по обрабатываемой информации:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.2.html#o-2">9.4. Таблица № 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plan.html">2. План реализации проекта</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plan.html#id2">2.1. Долгосрочный план (2026-2029)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan.html#id3">2.2. Среднесрочный план (2026-2027)</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="3.3.html">10. 3.3. Планируемая стоимость продукта. Расчет себестоимости</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.3.html#id2">10.1. Структура операционных издержек</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3.html#id3">10.2. Структура издержек на создание БД</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3.html#id4">10.3. Структура издержек на локальное развертывание по тарифу 4</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Внутренние документы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="inhouse.html">Закрытый раздел</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id2">Процессы взаимодействия ролей</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id3">Схема ответственности и взаимодействия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id4">Волонтерская модель развития</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="3.4.html">11. 3.4. Целевые сегменты потребителей создаваемого продукта и оценка платежеспособного спроса. Потенциальные клиенты (заказчики)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.4.html#id2">11.1. Сегментация потребителей по платежеспособности и потребностям</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.4.html#id3">11.2. Дополнительные сегменты</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.4.html#id4">11.3. Оценка платежеспособного спроса</a></li>
 </ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="3.5.html">12. 3.5 Информация об имеющихся соглашениях о намерениях, договорах поставки, письмах от российских организаций, подтверждающих востребованность планируемой к созданию продукции или услуги на ее основе, представленных в составе заявки на конкурс</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3.6.html">13. 3.6. Описание бизнес-модели проекта. Производственный план и план продаж</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.6.html#id2">13.1. Описание бизнес-модели проекта (модель Остервальдера)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.6.html#id3">13.2. Производственный план</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.6.html#id4">13.3. План продаж</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="3.7.html">14. 3.7 Стратегия продвижения продукта на рынок</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.7.html#id2">14.1. Концептуальные основы двухэтапной стратегии</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7.html#id3">14.2. Этап 1 — Массовое внедрение и академическое позиционирование</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7.html#id4">14.3. Этап 2 — Включение в систему государственного управления образованием</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7.html#opensource">14.4. Примеры успешных opensource-стратегий в аналитике</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7.html#id5">14.5. Общие принципы opensource-стратегии для аналитической платформы</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="4.1.html">15. 4.1. Количество сотрудников, в том числе занятых выполнением проекта, направления их деятельности и их квалификация с приложением подтверждающих документов</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="4.1.html#id2">15.1. Организационная структура команды</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.1.html#id3">15.2. Процессы взаимодействия ролей</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="4.2.html">16. 4.2. Опыт команды в реализации подобных проектов.</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="4.2.html#id2">16.1. Схема участия команды в проектах</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="4.3.html">17. 4.3. Организационная структура управления. Схема привлечения новых специалистов.</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="4.3.html#id2">17.1. Схема ответственности и взаимодействия</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.3.html#id3">17.2. Волонтерская модель развития</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="5.1.html">18. 5.1. Календарный план выполнения проекта (план составляется как на период реализации проекта за счет средств гранта, так и на период в течение 5 лет после завершения финансирования Фонда) (Таблица № 4).</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.2.html">19. 5.2 Расшифровка сметы расходов по приобретению оборудования, комплектующих и материалов , программных средств (Таблица № 5) (при наличии).</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.3-4-5.html">20. 5.3. Обоснование привлечения соисполнителей (при наличии).</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="5.3-4-5.html#id2">20.1. 5.3.1. Информация о привлекаемом соисполнителе и его компетенциях.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.3-4-5.html#id3">20.2. 5.3.2. Перечень выполняемых работ с детализацией.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.3-4-5.html#id4">20.3. 5.3.3. Обоснование необходимости привлечения соисполнителей.</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="5.3-4-5.html#id5">21. 5.4. Информация о наличии основных средств, а также необходимых площадей для выполнения проекта и дальнейшей коммерциализации заявленной продукции, подтверждаемая документами, представленными в составе заявки на конкурс (договоры аренды/собственности лабораторных и производственных площадей, оборудования).</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.3-4-5.html#id6">22. 5.5. Описание производственных процессов, с указанием планируемого места производства, перечень материалов и комплектующих, планируемых к использованию, с указанием страны производства указанных материалов и комплектующих (если применимо).</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6.1.html">23. 6.1. Общий объем финансирования проекта, в том числе объем внебюджетных инвестиций или собственных средств, источники средств и формы их получения.</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6.2.html">24. 6.2. Ранее привлеченное финансирование на реализацию проекта из бюджетных и внебюджетных источников (с указанием этих источников).</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6.3.html">25. 6.3. Основные плановые экономические показатели (расходы на производство, прибыль, чистая прибыль, рентабельность выпускаемого продукта) к концу реализации проекта.</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="6.3.html#id2">25.1. Ключевые экономические параметры проекта</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.3.html#id3">25.2. Таблица основных плановых экономических показателей</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="6.4.html">26. 6.4. Поквартальный план движения денежных средств с учётом затрат на проект</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="6.4.html#id2">26.1. 1. Движение денежных средств за 2026 год по кварталам</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.4.html#id3">26.2. 2. Движение денежных средств за 2027 год по кварталам</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.4.html#id4">26.3. 3. Динамика баланса наличности</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="6.5.html">27. 6.5 Возможные типы и источники рисков, меры по их уменьшению</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="6.5.html#id2">27.1. Экономическая эффективность для государства</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5.html#id3">27.2. Обоснование коммерческой модели реализации</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">28. Глоссарий</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="glossary.html#id2">28.1. Научные термины</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary.html#id3">28.2. Термины графовой БД</a></li>
+<p class="caption" role="heading"><span class="caption-text">Справочные материалы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Глоссарий</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html#id2">Научные термины</a></li>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html#id5">Термины графовой БД</a></li>
 </ul>
 </li>
 </ul>
@@ -187,7 +154,7 @@
           <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Оглавление</li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>Оглавление</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/oglavlenium.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
       </li>
@@ -197,101 +164,28 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="id1">
-<h1>Оглавление<a class="headerlink" href="#id1" title="Ссылка на этот заголовок"></a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="#%D0%B3%D0%BB%D0%BE%D1%81%D1%81%D0%B0%D1%80%D0%B8%D0%B9"><span class="xref myst">Глоссарий</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#%D0%BD%D0%B0%D1%83%D1%87%D0%BD%D1%8B%D0%B5-%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D1%8B"><span class="xref myst">Научные термины</span></a></p></li>
-<li><p><a class="reference internal" href="#%D1%82%D0%B5%D1%80%D0%BC%D0%B8%D0%BD%D1%8B-%D0%B3%D1%80%D0%B0%D1%84%D0%BE%D0%B2%D0%BE%D0%B9-%D0%B1%D0%B4"><span class="xref myst">Термины графовой БД</span></a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#1-%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA-%D0%BE%D1%82%D0%B1%D0%BE%D1%80%D0%B0"><span class="xref myst">1. Участник отбора</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#11-%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0"><span class="xref myst">1.1. Название проекта</span></a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#2-%D0%BD%D0%B0%D1%83%D1%87%D0%BD%D0%B0%D1%8F-%D1%81%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D1%8F%D1%8E%D1%89%D0%B0%D1%8F-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0"><span class="xref myst">2. Научная составляющая проекта</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#21-%D0%BD%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B0%D1%8F-%D0%BD%D0%BE%D0%B2%D0%B8%D0%B7%D0%BD%D0%B0-%D0%B8-%D0%BE%D0%B1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%B0%D0%B3%D0%B0%D0%B5%D0%BC%D1%8B%D1%85-%D0%B2-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B5-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D0%B9"><span class="xref myst">2.1. Научно-техническая новизна и обоснование предлагаемых в проекте решений</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#%D0%BF%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D0%B8-%D0%BF%D0%BE%D0%B2%D1%8B%D1%88%D0%B5%D0%BD%D0%B8%D1%8F-%D1%82%D0%BE%D1%87%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%B8-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8"><span class="xref myst">Показатели повышения точности и производительности</span></a></p></li>
-<li><p><a class="reference internal" href="#%D0%BD%D0%B0%D1%83%D1%87%D0%BD%D0%BE%D0%B5-%D0%BE%D0%B1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D1%81-%D0%BA%D0%BE%D0%BD%D0%BA%D1%80%D0%B5%D1%82%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B8%D1%81%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F%D0%BC%D0%B8"><span class="xref myst">Научное обоснование с конкретными исследованиями</span></a></p></li>
-<li><p><a class="reference internal" href="#%D1%84%D1%83%D0%BD%D0%B4%D0%B0%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D0%B0%D1%8F-%D0%BD%D0%B0%D1%83%D1%87%D0%BD%D0%B0%D1%8F-%D0%BD%D0%BE%D0%B2%D0%B8%D0%B7%D0%BD%D0%B0"><span class="xref myst">Фундаментальная научная новизна</span></a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#22-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D0%B5%D0%BC%D1%8B%D0%B9-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B5%D1%80%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82-%D0%B8-%D0%B5%D0%B3%D0%BE-%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B8"><span class="xref myst">2.2. Создаваемый коммерческий продукт и его характеристики</span></a></p></li>
-<li><p><a class="reference internal" href="#23-%D0%BC%D0%B5%D1%82%D0%BE%D0%B4%D1%8B-%D0%B8-%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D1%8B-%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BF%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D1%85-%D0%B7%D0%B0%D0%B4%D0%B0%D1%87"><span class="xref myst">2.3. Методы и способы решения поставленных задач</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#%D0%B0%D1%80%D1%85%D0%B8%D1%82%D0%B5%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D0%BC%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%B0%D0%B3%D0%B5%D0%BD%D1%82%D0%BE%D0%B9-%D0%B8%D0%B8-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%8B"><span class="xref myst">Архитектура мультиагентой ИИ системы</span></a></p></li>
-<li><p><a class="reference internal" href="#%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D0%B7-%D0%BD%D0%B5%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85"><span class="xref myst">Анализ неструктурированных данных</span></a></p></li>
-<li><p><a class="reference internal" href="#%D0%BF%D1%80%D0%BE%D0%B3%D0%BD%D0%BE%D0%B7%D0%BD%D0%B0%D1%8F-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D1%8C"><span class="xref myst">Прогнозная модель</span></a></p></li>
-<li><p><a class="reference internal" href="#%D0%BF%D0%BE%D1%81%D1%82%D1%80%D0%BE%D0%B5%D0%BD%D0%B8%D0%B5-%D0%BF%D0%BE%D0%BB%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B8%D0%BD%D0%B4%D0%B5%D0%BA%D1%81%D0%B0"><span class="xref myst">Построение полного индекса</span></a></p></li>
-<li><p><a class="reference internal" href="#%D0%BF%D0%BE%D0%B8%D1%81%D0%BA-%D0%BA%D0%BE%D0%BB%D0%B8%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D1%85-%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85"><span class="xref myst">Поиск количественных данных</span></a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#24-%D0%BD%D0%B0%D0%B8%D0%BC%D0%B5%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B8-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D0%B8%D1%82%D0%B5%D0%BB%D1%8C-%D0%BF%D0%BB%D0%B0%D0%BD%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D0%BE%D0%B9-%D0%BA-%D0%B7%D0%B0%D0%BC%D0%B5%D1%89%D0%B5%D0%BD%D0%B8%D1%8E-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%86%D0%B8%D0%B8"><span class="xref myst">2.4. Наименование и производитель планируемой к замещению продукции</span></a></p></li>
-<li><p><a class="reference internal" href="#25-%D0%B8%D0%BC%D0%B5%D1%8E%D1%89%D0%B8%D0%B9%D1%81%D1%8F-%D1%83-%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D0%B0-%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%B0-%D0%BE%D1%82%D0%B1%D0%BE%D1%80%D0%B0-%D0%BD%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D0%B7%D0%B0%D0%B4%D0%B5%D0%BB"><span class="xref myst">2.5. Имеющийся у коллектива участника отбора научно-технический задел</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF-1-%D0%BE%D0%B1%D1%89%D0%B8%D0%B9--%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5-%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D0%B8"><span class="xref myst">Прототип 1 (общий) – основные функции</span></a></p></li>
-<li><p><a class="reference internal" href="#%D0%BF%D1%80%D0%BE%D1%82%D0%BE%D1%82%D0%B8%D0%BF-2--%D0%B0%D0%B3%D0%B5%D0%BD%D1%82-%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA"><span class="xref myst">Прототип 2 – агент-аналитик</span></a></p></li>
-<li><p><a class="reference internal" href="#%D0%BF%D1%80%D0%B0%D0%B2%D0%B0%D0%B8-%D0%BD%D0%B0-%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%83%D1%8E-%D1%81%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C"><span class="xref myst">Права на интеллектуальную собственность</span></a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#26-%D0%BF%D0%BB%D0%B0%D0%BD%D1%8B-%D0%BF%D0%BE-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8E-%D0%B8-%D0%B7%D0%B0%D1%89%D0%B8%D1%82%D0%B5-%D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%B9-%D1%81%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8"><span class="xref myst">2.6. Планы по созданию и защите интеллектуальной собственности</span></a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#3-%D0%BF%D0%B5%D1%80%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D1%8B-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B5%D1%80%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8"><span class="xref myst">3. Перспективы коммерциализации</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#31-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BC-%D0%B8-%D0%B5%D0%BC%D0%BA%D0%BE%D1%81%D1%82%D1%8C-%D1%80%D1%8B%D0%BD%D0%BA%D0%B0-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B0"><span class="xref myst">3.1. Объем и емкость рынка продукта</span></a></p></li>
-<li><p><a class="reference internal" href="#32-%D1%81%D1%80%D0%B0%D0%B2%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D0%BA%D0%BE-%D1%8D%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D1%85-%D1%85%D0%B0%D1%80%D0%B0%D0%BA%D1%82%D0%B5%D1%80%D0%B8%D1%81%D1%82%D0%B8%D0%BA-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D0%B5%D0%BC%D0%BE%D0%B3%D0%BE-%D0%B8%D0%BD%D0%BD%D0%BE%D0%B2%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B0-%D1%81-%D0%B7%D0%B0%D1%80%D1%83%D0%B1%D0%B5%D0%B6%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B8-%D0%BE%D1%82%D0%B5%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B0%D0%BD%D0%B0%D0%BB%D0%BE%D0%B3%D0%B0%D0%BC%D0%B8"><span class="xref myst">3.2. Сравнение технико-экономических характеристик создаваемого инновационного продукта с зарубежными и отечественными аналогами</span></a></p></li>
-<li><p><a class="reference internal" href="#33-%D0%BF%D0%BB%D0%B0%D0%BD%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D0%B0%D1%8F-%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D1%8C-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B0-%D1%80%D0%B0%D1%81%D1%87%D0%B5%D1%82-%D1%81%D0%B5%D0%B1%D0%B5%D1%81%D1%82%D0%BE%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8"><span class="xref myst">3.3. Планируемая стоимость продукта. Расчет себестоимости</span></a></p></li>
-<li><p><a class="reference internal" href="#34-%D1%86%D0%B5%D0%BB%D0%B5%D0%B2%D1%8B%D0%B5-%D1%81%D0%B5%D0%B3%D0%BC%D0%B5%D0%BD%D1%82%D1%8B-%D0%BF%D0%BE%D1%82%D1%80%D0%B5%D0%B1%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D0%B5%D0%BC%D0%BE%D0%B3%D0%BE-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B0-%D0%B8-%D0%BE%D1%86%D0%B5%D0%BD%D0%BA%D0%B0-%D0%BF%D0%BB%D0%B0%D1%82%D0%B5%D0%B6%D0%B5%D1%81%D0%BF%D0%BE%D1%81%D0%BE%D0%B1%D0%BD%D0%BE%D0%B3%D0%BE-%D1%81%D0%BF%D1%80%D0%BE%D1%81%D0%B0-%D0%BF%D0%BE%D1%82%D0%B5%D0%BD%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BA%D0%BB%D0%B8%D0%B5%D0%BD%D1%82%D1%8B-%D0%B7%D0%B0%D0%BA%D0%B0%D0%B7%D1%87%D0%B8%D0%BA%D0%B8"><span class="xref myst">3.4. Целевые сегменты потребителей создаваемого продукта и оценка платежеспособного спроса. Потенциальные клиенты (заказчики)</span></a></p></li>
-<li><p><a class="reference internal" href="#35-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-%D0%BE%D0%B1-%D0%B8%D0%BC%D0%B5%D1%8E%D1%89%D0%B8%D1%85%D1%81%D1%8F-%D1%81%D0%BE%D0%B3%D0%BB%D0%B0%D1%88%D0%B5%D0%BD%D0%B8%D1%8F%D1%85-%D0%BE-%D0%BD%D0%B0%D0%BC%D0%B5%D1%80%D0%B5%D0%BD%D0%B8%D1%8F%D1%85-%D0%B4%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D0%B0%D1%85-%D0%BF%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BA%D0%B8-%D0%BF%D0%B8%D1%81%D1%8C%D0%BC%D0%B0%D1%85-%D0%BE%D1%82-%D1%80%D0%BE%D1%81%D1%81%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D1%85-%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B9-%D0%BF%D0%BE%D0%B4%D1%82%D0%B2%D0%B5%D1%80%D0%B6%D0%B4%D0%B0%D1%8E%D1%89%D0%B8%D1%85-%D0%B2%D0%BE%D1%81%D1%82%D1%80%D0%B5%D0%B1%D0%BE%D0%B2%D0%B0%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%BF%D0%BB%D0%B0%D0%BD%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D0%BE%D0%B9-%D0%BA-%D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8E-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%86%D0%B8%D0%B8-%D0%B8%D0%BB%D0%B8-%D1%83%D1%81%D0%BB%D1%83%D0%B3%D0%B8-%D0%BD%D0%B0-%D0%B5%D0%B5-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B5-%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D1%85-%D0%B2-%D1%81%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B5-%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8-%D0%BD%D0%B0-%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81"><span class="xref myst">3.5. Информация об имеющихся соглашениях о намерениях, договорах поставки, письмах от российских организаций, подтверждающих востребованность планируемой к созданию продукции или услуги на ее основе, представленных в составе заявки на конкурс</span></a></p></li>
-<li><p><a class="reference internal" href="#36-%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81-%D0%BC%D0%BE%D0%B4%D0%B5%D0%BB%D0%B8-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D0%B9-%D0%BF%D0%BB%D0%B0%D0%BD-%D0%B8-%D0%BF%D0%BB%D0%B0%D0%BD-%D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B6"><span class="xref myst">3.6. Описание бизнес-модели проекта. Производственный план и план продаж</span></a></p></li>
-<li><p><a class="reference internal" href="#37-%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D1%8F-%D0%BF%D1%80%D0%BE%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B0-%D0%BD%D0%B0-%D1%80%D1%8B%D0%BD%D0%BE%D0%BA"><span class="xref myst">3.7. Стратегия продвижения продукта на рынок</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#%D0%BA%D0%BE%D0%BD%D1%86%D0%B5%D0%BF%D1%82%D1%83%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D1%8B-%D0%B4%D0%B2%D1%83%D1%85%D1%8D%D1%82%D0%B0%D0%BF%D0%BD%D0%BE%D0%B9-%D1%81%D1%82%D1%80%D0%B0%D1%82%D0%B5%D0%B3%D0%B8%D0%B8"><span class="xref myst">Концептуальные основы двухэтапной стратегии</span></a></p></li>
-<li><p><a class="reference internal" href="#%D1%8D%D1%82%D0%B0%D0%BF-1--%D0%BC%D0%B0%D1%81%D1%81%D0%BE%D0%B2%D0%BE%D0%B5-%D0%B2%D0%BD%D0%B5%D0%B4%D1%80%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B8-%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5-%D0%BF%D0%BE%D0%B7%D0%B8%D1%86%D0%B8%D0%BE%D0%BD%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5"><span class="xref myst">Этап 1 — Массовое внедрение и академическое позиционирование</span></a></p></li>
-<li><p><a class="reference internal" href="#%D1%8D%D1%82%D0%B0%D0%BF-2--%D0%B2%D0%BA%D0%BB%D1%8E%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D0%B2-%D1%81%D0%B8%D1%81%D1%82%D0%B5%D0%BC%D1%83-%D0%B3%D0%BE%D1%81%D1%83%D0%B4%D0%B0%D1%80%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE-%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BE%D0%B1%D1%80%D0%B0%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5%D0%BC"><span class="xref myst">Этап 2 — Включение в систему государственного управления образованием</span></a></p></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#4-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D0%B0-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0"><span class="xref myst">4. Команда проекта</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#41-%D0%BA%D0%BE%D0%BB%D0%B8%D1%87%D0%B5%D1%81%D1%82%D0%B2%D0%BE-%D1%81%D0%BE%D1%82%D1%80%D1%83%D0%B4%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2-%D0%B2-%D1%82%D0%BE%D0%BC-%D1%87%D0%B8%D1%81%D0%BB%D0%B5-%D0%B7%D0%B0%D0%BD%D1%8F%D1%82%D1%8B%D1%85-%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-%D0%BD%D0%B0%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B8%D1%85-%D0%B4%D0%B5%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%B8-%D0%B8%D1%85-%D0%BA%D0%B2%D0%B0%D0%BB%D0%B8%D1%84%D0%B8%D0%BA%D0%B0%D1%86%D0%B8%D1%8F-%D1%81-%D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5%D0%BC-%D0%BF%D0%BE%D0%B4%D1%82%D0%B2%D0%B5%D1%80%D0%B6%D0%B4%D0%B0%D1%8E%D1%89%D0%B8%D1%85-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%BE%D0%B2"><span class="xref myst">4.1. Количество сотрудников, в том числе занятых выполнением проекта, направления их деятельности и их квалификация с приложением подтверждающих документов (Таблица № 3)</span></a></p></li>
-<li><p><a class="reference internal" href="#42-%D0%BE%D0%BF%D1%8B%D1%82-%D0%BA%D0%BE%D0%BC%D0%B0%D0%BD%D0%B4%D1%8B-%D0%B2-%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-%D0%BF%D0%BE%D0%B4%D0%BE%D0%B1%D0%BD%D1%8B%D1%85-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%BE%D0%B2"><span class="xref myst">4.2. Опыт команды в реализации подобных проектов</span></a></p></li>
-<li><p><a class="reference internal" href="#43-%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%BE%D0%BD%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D1%83%D1%80%D0%B0-%D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81%D1%85%D0%B5%D0%BC%D0%B0-%D0%BF%D1%80%D0%B8%D0%B2%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BD%D0%BE%D0%B2%D1%8B%D1%85-%D1%81%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D1%81%D1%82%D0%BE%D0%B2"><span class="xref myst">4.3. Организационная структура управления. Схема привлечения новых специалистов</span></a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#5-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%BE%D0%B5-%D0%BE%D0%B1%D0%B5%D1%81%D0%BF%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0"><span class="xref myst">5. Техническое обеспечение реализации проекта</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#51-%D0%BA%D0%B0%D0%BB%D0%B5%D0%BD%D0%B4%D0%B0%D1%80%D0%BD%D1%8B%D0%B9-%D0%BF%D0%BB%D0%B0%D0%BD-%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-%D0%BF%D0%BB%D0%B0%D0%BD-%D1%81%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D1%8F%D0%B5%D1%82%D1%81%D1%8F-%D0%BA%D0%B0%D0%BA-%D0%BD%D0%B0-%D0%BF%D0%B5%D1%80%D0%B8%D0%BE%D0%B4-%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-%D0%B7%D0%B0-%D1%81%D1%87%D0%B5%D1%82-%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2-%D0%B3%D1%80%D0%B0%D0%BD%D1%82%D0%B0-%D1%82%D0%B0%D0%BA-%D0%B8-%D0%BD%D0%B0-%D0%BF%D0%B5%D1%80%D0%B8%D0%BE%D0%B4-%D0%B2-%D1%82%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D0%B5-5-%D0%BB%D0%B5%D1%82-%D0%BF%D0%BE%D1%81%D0%BB%D0%B5-%D0%B7%D0%B0%D0%B2%D0%B5%D1%80%D1%88%D0%B5%D0%BD%D0%B8%D1%8F-%D1%84%D0%B8%D0%BD%D0%B0%D0%BD%D1%81%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D1%84%D0%BE%D0%BD%D0%B4%D0%B0-%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0--4"><span class="xref myst">5.1. Календарный план (Таблица № 4)</span></a></p></li>
-<li><p><a class="reference internal" href="#52-%D1%80%D0%B0%D1%81%D1%88%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BA%D0%B0-%D1%81%D0%BC%D0%B5%D1%82%D1%8B-%D1%80%D0%B0%D1%81%D1%85%D0%BE%D0%B4%D0%BE%D0%B2-%D0%BF%D0%BE-%D0%BF%D1%80%D0%B8%D0%BE%D0%B1%D1%80%D0%B5%D1%82%D0%B5%D0%BD%D0%B8%D1%8E-%D0%BE%D0%B1%D0%BE%D1%80%D1%83%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D1%83%D1%8E%D1%89%D0%B8%D1%85-%D0%B8-%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%BE%D0%B2-%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%BD%D1%8B%D1%85-%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2-%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0--5-%D0%BF%D1%80%D0%B8-%D0%BD%D0%B0%D0%BB%D0%B8%D1%87%D0%B8%D0%B8"><span class="xref myst">5.2. Расшифровка сметы расходов по приобретению оборудования (Таблица № 5)</span></a></p></li>
-<li><p><a class="reference internal" href="#53-%D0%BE%D0%B1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%B8%D0%B2%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81%D0%BE%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9-%D0%BF%D1%80%D0%B8-%D0%BD%D0%B0%D0%BB%D0%B8%D1%87%D0%B8%D0%B8"><span class="xref myst">5.3. Обоснование привлечения соисполнителей (при наличии)</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#531-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-%D0%BE-%D0%BF%D1%80%D0%B8%D0%B2%D0%BB%D0%B5%D0%BA%D0%B0%D0%B5%D0%BC%D0%BE%D0%BC-%D1%81%D0%BE%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D0%B5-%D0%B8-%D0%B5%D0%B3%D0%BE-%D0%BA%D0%BE%D0%BC%D0%BF%D0%B5%D1%82%D0%B5%D0%BD%D1%86%D0%B8%D1%8F%D1%85"><span class="xref myst">5.3.1. Информация о привлекаемом соисполнителе и его компетенциях</span></a></p></li>
-<li><p><a class="reference internal" href="#532-%D0%BF%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C-%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D1%8F%D0%B5%D0%BC%D1%8B%D1%85-%D1%80%D0%B0%D0%B1%D0%BE%D1%82-%D1%81-%D0%B4%D0%B5%D1%82%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B5%D0%B9"><span class="xref myst">5.3.2. Перечень выполняемых работ с детализацией</span></a></p></li>
-<li><p><a class="reference internal" href="#533-%D0%BE%D0%B1%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8-%D0%BF%D1%80%D0%B8%D0%B2%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%B8%D1%8F-%D1%81%D0%BE%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D0%BD%D0%B8%D1%82%D0%B5%D0%BB%D0%B5%D0%B9"><span class="xref myst">5.3.3. Обоснование необходимости привлечения соисполнителей</span></a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#54-%D0%B8%D0%BD%D1%84%D0%BE%D1%80%D0%BC%D0%B0%D1%86%D0%B8%D1%8F-%D0%BE-%D0%BD%D0%B0%D0%BB%D0%B8%D1%87%D0%B8%D0%B8-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D1%85-%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2-%D0%B0-%D1%82%D0%B0%D0%BA%D0%B6%D0%B5-%D0%BD%D0%B5%D0%BE%D0%B1%D1%85%D0%BE%D0%B4%D0%B8%D0%BC%D1%8B%D1%85-%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%B5%D0%B9-%D0%B4%D0%BB%D1%8F-%D0%B2%D1%8B%D0%BF%D0%BE%D0%BB%D0%BD%D0%B5%D0%BD%D0%B8%D1%8F-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-%D0%B8-%D0%B4%D0%B0%D0%BB%D1%8C%D0%BD%D0%B5%D0%B9%D1%88%D0%B5%D0%B9-%D0%BA%D0%BE%D0%BC%D0%BC%D0%B5%D1%80%D1%86%D0%B8%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-%D0%B7%D0%B0%D1%8F%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D0%BE%D0%B9-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%86%D0%B8%D0%B8-%D0%BF%D0%BE%D0%B4%D1%82%D0%B2%D0%B5%D1%80%D0%B6%D0%B4%D0%B0%D0%B5%D0%BC%D0%B0%D1%8F-%D0%B4%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B0%D0%BC%D0%B8-%D0%BF%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D0%B5%D0%BD%D0%BD%D1%8B%D0%BC%D0%B8-%D0%B2-%D1%81%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%B5-%D0%B7%D0%B0%D1%8F%D0%B2%D0%BA%D0%B8-%D0%BD%D0%B0-%D0%BA%D0%BE%D0%BD%D0%BA%D1%83%D1%80%D1%81-%D0%B4%D0%BE%D0%B3%D0%BE%D0%B2%D0%BE%D1%80%D1%8B-%D0%B0%D1%80%D0%B5%D0%BD%D0%B4%D1%8B%D1%81%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D0%BB%D0%B0%D0%B1%D0%BE%D1%80%D0%B0%D1%82%D0%BE%D1%80%D0%BD%D1%8B%D1%85-%D0%B8-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D1%85-%D0%BF%D0%BB%D0%BE%D1%89%D0%B0%D0%B4%D0%B5%D0%B9-%D0%BE%D0%B1%D0%BE%D1%80%D1%83%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F"><span class="xref myst">5.4. Информация о наличии основных средств)</span></a></p></li>
-<li><p><a class="reference internal" href="#55-%D0%BE%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D1%85-%D0%BF%D1%80%D0%BE%D1%86%D0%B5%D1%81%D1%81%D0%BE%D0%B2-%D1%81-%D1%83%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D0%B8%D0%B5%D0%BC-%D0%BF%D0%BB%D0%B0%D0%BD%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D0%BE%D0%B3%D0%BE-%D0%BC%D0%B5%D1%81%D1%82%D0%B0-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B0-%D0%BF%D0%B5%D1%80%D0%B5%D1%87%D0%B5%D0%BD%D1%8C-%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%BE%D0%B2-%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D1%83%D1%8E%D1%89%D0%B8%D1%85-%D0%BF%D0%BB%D0%B0%D0%BD%D0%B8%D1%80%D1%83%D0%B5%D0%BC%D1%8B%D1%85-%D0%BA-%D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8E-%D1%81-%D1%83%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D0%B8%D0%B5%D0%BC-%D1%81%D1%82%D1%80%D0%B0%D0%BD%D1%8B-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%B0-%D1%83%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D0%BD%D1%8B%D1%85-%D0%BC%D0%B0%D1%82%D0%B5%D1%80%D0%B8%D0%B0%D0%BB%D0%BE%D0%B2-%D0%B8-%D0%BA%D0%BE%D0%BC%D0%BF%D0%BB%D0%B5%D0%BA%D1%82%D1%83%D1%8E%D1%89%D0%B8%D1%85-%D0%B5%D1%81%D0%BB%D0%B8-%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D0%BD%D0%B8%D0%BC%D0%BE"><span class="xref myst">5.5. Описание производственных процессов(если применимо)</span></a></p></li>
-</ul>
-</li>
-<li><p><a class="reference internal" href="#6-%D1%84%D0%B8%D0%BD%D0%B0%D0%BD%D1%81%D0%BE%D0%B2%D1%8B%D0%B9-%D0%BF%D0%BB%D0%B0%D0%BD"><span class="xref myst">6. Финансовый план</span></a></p>
-<ul>
-<li><p><a class="reference internal" href="#61-%D0%BE%D0%B1%D1%89%D0%B8%D0%B9-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BC-%D1%84%D0%B8%D0%BD%D0%B0%D0%BD%D1%81%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-%D0%B2-%D1%82%D0%BE%D0%BC-%D1%87%D0%B8%D1%81%D0%BB%D0%B5-%D0%BE%D0%B1%D1%8A%D0%B5%D0%BC-%D0%B2%D0%BD%D0%B5%D0%B1%D1%8E%D0%B4%D0%B6%D0%B5%D1%82%D0%BD%D1%8B%D1%85-%D0%B8%D0%BD%D0%B2%D0%B5%D1%81%D1%82%D0%B8%D1%86%D0%B8%D0%B9-%D0%B8%D0%BB%D0%B8-%D1%81%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D1%8B%D1%85-%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2-%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8-%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2-%D0%B8-%D1%84%D0%BE%D1%80%D0%BC%D1%8B-%D0%B8%D1%85-%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B5%D0%BD%D0%B8%D1%8F"><span class="xref myst">6.1. Общий объем финансирования проекта, в том числе объем внебюджетных инвестиций или собственных средств, источники средств и формы их получения</span></a></p></li>
-<li><p><a class="reference internal" href="#62-%D1%80%D0%B0%D0%BD%D0%B5%D0%B5-%D0%BF%D1%80%D0%B8%D0%B2%D0%BB%D0%B5%D1%87%D0%B5%D0%BD%D0%BD%D0%BE%D0%B5-%D1%84%D0%B8%D0%BD%D0%B0%D0%BD%D1%81%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5-%D0%BD%D0%B0-%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8E-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0-%D0%B8%D0%B7-%D0%B1%D1%8E%D0%B4%D0%B6%D0%B5%D1%82%D0%BD%D1%8B%D1%85-%D0%B8-%D0%B2%D0%BD%D0%B5%D0%B1%D1%8E%D0%B4%D0%B6%D0%B5%D1%82%D0%BD%D1%8B%D1%85-%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2-%D1%81-%D1%83%D0%BA%D0%B0%D0%B7%D0%B0%D0%BD%D0%B8%D0%B5%D0%BC-%D1%8D%D1%82%D0%B8%D1%85-%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%BE%D0%B2"><span class="xref myst">6.2. Ранее привлеченное финансирование на реализацию проекта из бюджетных и внебюджетных источников (с указанием этих источников)</span></a></p></li>
-<li><p><a class="reference internal" href="#63-%D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%BD%D1%8B%D0%B5-%D0%BF%D0%BB%D0%B0%D0%BD%D0%BE%D0%B2%D1%8B%D0%B5-%D1%8D%D0%BA%D0%BE%D0%BD%D0%BE%D0%BC%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B5-%D0%BF%D0%BE%D0%BA%D0%B0%D0%B7%D0%B0%D1%82%D0%B5%D0%BB%D0%B8-%D1%80%D0%B0%D1%81%D1%85%D0%BE%D0%B4%D1%8B-%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B8%D0%B7%D0%B2%D0%BE%D0%B4%D1%81%D1%82%D0%B2%D0%BE-%D0%BF%D1%80%D0%B8%D0%B1%D1%8B%D0%BB%D1%8C-%D1%87%D0%B8%D1%81%D1%82%D0%B0%D1%8F-%D0%BF%D1%80%D0%B8%D0%B1%D1%8B%D0%BB%D1%8C-%D1%80%D0%B5%D0%BD%D1%82%D0%B0%D0%B1%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D1%8C-%D0%B2%D1%8B%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC%D0%BE%D0%B3%D0%BE-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B0-%D0%BA-%D0%BA%D0%BE%D0%BD%D1%86%D1%83-%D1%80%D0%B5%D0%B0%D0%BB%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D0%B8-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D0%B0"><span class="xref myst">6.3. Основные плановые экономические показатели к концу реализации проекта</span></a></p></li>
-<li><p><a class="reference internal" href="#64-%D0%BF%D0%BE%D0%BA%D0%B2%D0%B0%D1%80%D1%82%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B9-%D0%BF%D0%BB%D0%B0%D0%BD-%D0%B4%D0%B2%D0%B8%D0%B6%D0%B5%D0%BD%D0%B8%D1%8F-%D0%B4%D0%B5%D0%BD%D0%B5%D0%B6%D0%BD%D1%8B%D1%85-%D1%81%D1%80%D0%B5%D0%B4%D1%81%D1%82%D0%B2-%D1%81-%D1%83%D1%87%D1%91%D1%82%D0%BE%D0%BC-%D0%B7%D0%B0%D1%82%D1%80%D0%B0%D1%82-%D0%BD%D0%B0-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82-%D1%82%D0%B0%D0%B1%D0%BB%D0%B8%D1%86%D0%B0--5-%D1%81%D0%BE%D1%81%D1%82%D0%B0%D0%B2%D0%BB%D1%8F%D0%B5%D1%82%D1%81%D1%8F-%D0%BD%D0%B5-%D0%BF%D0%BE-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%83-%D0%B0-%D0%BF%D0%BE-%D0%B4%D0%B5%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE%D1%81%D1%82%D0%B8-%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%B0-%D0%BE%D1%82%D0%B1%D0%BE%D1%80%D0%B0-%D0%B2-%D1%86%D0%B5%D0%BB%D0%BE%D0%BC"><span class="xref myst">6.4. Поквартальный план движения денежных средств с учётом затрат на проект (Таблица № 5 составляется не по проекту, а по деятельности участника отбора в целом)</span></a></p></li>
-<li><p><a class="reference internal" href="#65-%D0%B2%D0%BE%D0%B7%D0%BC%D0%BE%D0%B6%D0%BD%D1%8B%D0%B5-%D1%82%D0%B8%D0%BF%D1%8B-%D0%B8-%D0%B8%D1%81%D1%82%D0%BE%D1%87%D0%BD%D0%B8%D0%BA%D0%B8-%D1%80%D0%B8%D1%81%D0%BA%D0%BE%D0%B2-%D0%BC%D0%B5%D1%80%D1%8B-%D0%BF%D0%BE-%D0%B8%D1%85-%D1%83%D0%BC%D0%B5%D0%BD%D1%8C%D1%88%D0%B5%D0%BD%D0%B8%D1%8E"><span class="xref myst">6.5. Возможные типы и источники рисков, меры по их уменьшению</span></a></p></li>
-</ul>
-</li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><span class="section-number">1. </span>Оглавление<a class="headerlink" href="#id1" title="Ссылка на этот заголовок"></a></h1>
 <section id="id2">
-<h2>Краткое описание проекта<a class="headerlink" href="#id2" title="Ссылка на этот заголовок"></a></h2>
+<h2><span class="section-number">1.1. </span>Нзначение системы<a class="headerlink" href="#id2" title="Ссылка на этот заголовок"></a></h2>
+</section>
+<section id="id3">
+<h2><span class="section-number">1.2. </span>Академическое обоснование<a class="headerlink" href="#id3" title="Ссылка на этот заголовок"></a></h2>
+</section>
+<section id="id4">
+<h2><span class="section-number">1.3. </span>Сценарии использования<a class="headerlink" href="#id4" title="Ссылка на этот заголовок"></a></h2>
+</section>
+<section id="id5">
+<h2><span class="section-number">1.4. </span>План реализации<a class="headerlink" href="#id5" title="Ссылка на этот заголовок"></a></h2>
+</section>
+<section id="id6">
+<h2><span class="section-number">1.5. </span>Существующий задел<a class="headerlink" href="#id6" title="Ссылка на этот заголовок"></a></h2>
+</section>
+<section id="id7">
+<h2><span class="section-number">1.6. </span>Закрытый раздел<a class="headerlink" href="#id7" title="Ссылка на этот заголовок"></a></h2>
+</section>
+<section id="id8">
+<h2><span class="section-number">1.7. </span>Краткое описание проекта<a class="headerlink" href="#id8" title="Ссылка на этот заголовок"></a></h2>
 <p><strong>Система аналитики в сфере образования</strong> представляет собой комплексную платформу на основе технологий искусственного интеллекта для анализа и прогнозирования в образовательном секторе России. В основе системы лежит уникальная графовая база данных, включающая 750 статистических таблиц с образовательными данными, обработанными и структурированными в семантические связи. Ключевые характеристики платформы — <strong>максимальная точность и полнота данных</strong> благодаря использованию официальной государственной статистики и GraphRAG-технологий для интеллектуальной аналитики, позволяя выполнять естественноязыковые запросы и получать достоверные инсайты по развитию образования, трудоустройству выпускников, популярности образовательных программ и региональным особенностям системы образования.</p>
 <p>Полное научно-техническое название продукта — <strong>прогнозно-аналитическая мультиагентная ИИ система социально-экономических показателей в сфере образования</strong> — отражает ключевые технологические и функциональные характеристики разрабатываемого решения. <strong>Прогнозно-аналитическая</strong> составляющая подчеркивает способность системы не только анализировать текущее состояние образовательного сектора, но и формировать научно обоснованные прогнозы развития на основе исторических данных и трендов. <strong>Мультиагентная архитектура</strong> означает использование множества специализированных ИИ-агентов, каждый из которых отвечает за определенный аспект анализа: от обработки статистических данных до генерации визуализаций и естественноязыковых ответов. <strong>ИИ система</strong> указывает на применение современных технологий машинного обучения, включая большие языковые модели и графовые алгоритмы для интеллектуальной обработки информации. <strong>Социально-экономические показатели</strong> определяют предметную область анализа — комплексные метрики, характеризующие взаимосвязь образовательных процессов с социальными и экономическими факторами развития регионов и страны в целом.</p>
 <p><strong>Цель проекта</strong> — комплексная обработка статистических данных сферы образования РФ и их интеграция в государственное управление с использованием передовых методов аналитики на основе искусственного интеллекта. Проект обеспечивает кардинальный переход от традиционных PDF-отчетов и статических дашбордов к интеллектуальной аналитике через систему GraphRAG. Критически важным аспектом является введение в аналитический оборот обширного массива ранее неохваченных данных, которые остаются неучтенными действующими аналитическими системами.</p>
@@ -301,7 +195,10 @@
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="index.html" class="btn btn-neutral float-left" title="Прогнозно-аналитическая мультиагентная ИИ система" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="naznachenie.html" class="btn btn-neutral float-right" title="2. Назначение системы (основные функции)" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 
@@ -323,7 +220,27 @@
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+ 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Найти все блоки с классом mermaid и инициализировать их
+        const mermaidBlocks = document.querySelectorAll('pre.mermaid');
+        mermaidBlocks.forEach(function(block) {
+            // Создать div элемент вместо pre
+            const div = document.createElement('div');
+            div.className = 'mermaid';
+            div.innerHTML = block.textContent;
+            
+            // Заменить pre на div
+            block.parentNode.replaceChild(div, block);
+        });
+        
+        // Перезапустить mermaid
+        mermaid.init();
+    });
+</script>
+
 
 </body>
 </html>

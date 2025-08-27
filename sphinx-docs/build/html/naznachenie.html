@@ -1,0 +1,761 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. Назначение системы (основные функции) &mdash; документация Прогнозно-аналитическая ИИ система 1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-2.3.0/datatables.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=f8c9c462" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=9ca2116e"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+      <script type="module">
+mermaid.initialize({
+    theme: 'default',
+    themeVariables: {
+        primaryColor: '#f39c12',
+        primaryTextColor: '#2c3e50',
+        primaryBorderColor: '#e74c3c',
+        lineColor: '#34495e',
+        secondaryColor: '#ecf0f1',
+        tertiaryColor: '#fff'
+    },
+    startOnLoad: true,
+    flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true
+    }
+});
+</script>
+      <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+      <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
+      <script src="https://cdn.datatables.net/v/dt/dt-2.3.0/datatables.min.js"></script>
+      <script src="_static/activate_datatables.js?v=eec09f64"></script>
+      <script src="_static/table-interactions.js?v=59f39348"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="2. Сценарии использования" href="uses_case.html" />
+    <link rel="prev" title="Прогнозно-аналитическая мультиагентная ИИ система" href="index.html" />
+ 
+<script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: 'default',
+        themeVariables: {
+            primaryColor: '#f39c12',
+            primaryTextColor: '#2c3e50',
+            primaryBorderColor: '#e74c3c',
+            lineColor: '#34495e',
+            secondaryColor: '#ecf0f1',
+            tertiaryColor: '#fff'
+        },
+        flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true
+        }
+    });
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Прогнозно-аналитическая ИИ система
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Обзор системы</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Назначение системы (основные функции)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1.1. Основные потребительские качества</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">1.2. <strong>Анализ неструктурированных данных</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#neo4j">1.3. <strong>Графовая база данных Neo4j</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">1.3.1. <strong>Построение полного индекса</strong> (на основе всех количественных данных в БД)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id5">1.3.2. <strong>Прогнозная модель</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">1.4. <strong>Поиск количественных данных</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">1.5. <strong>Анализ и рекомендации</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id8">1.5.1. Архитектура мультиагентой ИИ системы</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uses_case.html">2. Сценарии использования</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id2">2.1. Сценарий 1: Федеральное министерство планирует образовательную политику</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id3">2.2. Сценарий 2: Исследовательский консорциум проводит научный анализ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id4">2.3. Сценарий 3: Региональное управление образованием оптимизирует ресурсы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id5">2.4. Сценарий 4: Образовательная организация развивает программы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id6">2.5. Сценарий 5: Гражданин ищет образовательные возможности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id7">2.6. Аналоги и их ограничения</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="academ.html">3. Академическое обоснование</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="academ.html#id2">3.1. Показатели повышения точности и производительности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="academ.html#id3">3.2. Конкретные исследования</a></li>
+<li class="toctree-l2"><a class="reference internal" href="academ.html#id4">3.3. Параметры системы</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Техническая реализация</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="prototype.html">1. Текущий задел</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="prototype.html#id2">1.1. Прототип 1 (общий) – основные функции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="prototype.html#id3">1.2. Прототип 2 – агент-аналитик</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="prototype.html#id4">1.2.1. Сриншоты прототипа</a></li>
+<li class="toctree-l3"><a class="reference internal" href="prototype.html#id5">1.2.2. Референсы по дашбордам</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plan.html">2. План реализации проекта</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plan.html#id2">2.1. Долгосрочный план (2026-2029)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan.html#id3">2.2. Среднесрочный план (2026-2027)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Внутренние документы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="inhouse.html">Закрытый раздел</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id2">Процессы взаимодействия ролей</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id3">Схема ответственности и взаимодействия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id4">Волонтерская модель развития</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Справочные материалы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Глоссарий</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html#id2">Научные термины</a></li>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html#id5">Термины графовой БД</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="beautiful_tables.html">Примеры красивых таблиц</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id2">1. Базовая интерактивная таблица</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id3">2. Таблица с цветными статусами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id4">3. Сложная таблица с финансовыми показателями</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id5">4. Свертываемая таблица с техническими характеристиками</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id6">5. Таблица сравнения конкурентов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id7">6. Таблица с дорожной картой проекта</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id8">Инструкции по использованию</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id9">7. Таблица с расширенными фильтрами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id10">8. Таблица с группировкой и сворачиванием строк</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id11">9. Интерактивная таблица с поиском и множественными фильтрами</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Прогнозно-аналитическая ИИ система</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>Назначение системы (основные функции)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/naznachenie.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><span class="section-number">1. </span>Назначение системы (основные функции)<a class="headerlink" href="#id1" title="Ссылка на этот заголовок"></a></h1>
+<blockquote>
+<div><p><strong>Связь с пользователями:</strong> Функциональность системы разрабатывается с учетом потребностей основных групп пользователей: федеральных министерств и ведомств, научно-исследовательских институтов и университетов, региональных органов управления образованием, образовательных организаций и граждан РФ. Каждая функция направлена на решение конкретных задач различных категорий пользователей.</p>
+</div></blockquote>
+<section id="id2">
+<h2><span class="section-number">1.1. </span>Основные потребительские качества<a class="headerlink" href="#id2" title="Ссылка на этот заголовок"></a></h2>
+<ol class="arabic simple">
+<li><p><strong>Исключение галлюцинаций в работе <a class="reference internal" href="glossary.html#основные-технологии-искусственного-интеллекта"><span class="std std-ref">LLM</span></a></strong></p>
+<ul class="simple">
+<li><p>Полные онтологии позволяют системе определять недостающие данные</p></li>
+<li><p>Снижение ложных утверждений до 15% (базовый <a class="reference internal" href="glossary.html#технологии-работы-с-данными"><span class="std std-ref">RAG</span></a>: 25-30%)</p></li>
+<li><p>Автоматическое указание источников информации в метаданных узлов</p></li>
+</ul>
+</li>
+<li><p><strong>Интеллектуальная визуализация данных</strong></p>
+<ul class="simple">
+<li><p>Автоматический выбор релевантных аналитических срезов</p></li>
+<li><p>Шаблоны графиков с правилами использования для различных типов данных</p></li>
+<li><p>Региональные карты, временные ряды, сравнительная аналитика</p></li>
+</ul>
+</li>
+<li><p><strong>Точность и полнота</strong></p>
+<ul class="simple">
+<li><p>Обработка всех возможных источников правильно</p></li>
+<li><p>Поинмание нейросетьют отношений между данными</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="id3">
+<h2><span class="section-number">1.2. </span><strong>Анализ неструктурированных данных</strong><a class="headerlink" href="#id3" title="Ссылка на этот заголовок"></a></h2>
+<ol class="arabic simple">
+<li><p>Сопоставление данных</p>
+<ol class="arabic simple">
+<li><p>Сопоставление исторических документов СССР с современными данными и учет других категорий документов (<a class="reference internal" href="#223-%D0%BF%D0%B0%D1%80%D0%B0%D0%BC%D0%B5%D1%82%D1%80%D1%8B-%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D0%B0"><span class="xref myst">см. раздел 2.2.3</span></a>)</p></li>
+<li><p>Автоматическое распознавание эволюции форм статистической отчетности по временным периодам 2015-2024 годы (<a class="reference internal" href="#25-%D0%B8%D0%BC%D0%B5%D1%8E%D1%89%D0%B8%D0%B9%D1%81%D1%8F-%D1%83-%D0%BA%D0%BE%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D0%B8%D0%B2%D0%B0-%D1%83%D1%87%D0%B0%D1%81%D1%82%D0%BD%D0%B8%D0%BA%D0%B0-%D0%BE%D1%82%D0%B1%D0%BE%D1%80%D0%B0-%D0%BD%D0%B0%D1%83%D1%87%D0%BD%D0%BE-%D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D0%B8%D0%B9-%D0%B7%D0%B0%D0%B4%D0%B5%D0%BB"><span class="xref myst">архитектура прототипа в разделе 2.5</span></a>)</p></li>
+<li><p>Иерархические связи (классы (без овз) + классы (овз) = все классы)</p></li>
+</ol>
+</li>
+<li><p>Извлечение количественных данных</p>
+<ul class="simple">
+<li><p><strong>NLP-обработка</strong> полных текстов для определения отрывков с количественными данными</p></li>
+<li><p><strong>OCR для PDF</strong>, веб-парсинг, обработка Word/Excel с объединенными ячейками</p></li>
+<li><p><strong>LLM-интеграция</strong> с запросом онтологий из БД для определения правильной конфигурации данных</p></li>
+<li><p>Точность извлечения фактов: <strong>92%+</strong> (GraphRAG-Bench)</p></li>
+</ul>
+</li>
+<li><p>Автоматическая обработка новых документов и сбор из помеченных телеграмм чатов</p>
+<ul class="simple">
+<li><p><strong>Few-shot обучение</strong> - адаптация к новым типам документов с 85%+ точностью при 10-20 примерах</p></li>
+<li><p>Парсинг документов из телеграм-чатов по указанию</p></li>
+<li><p>Обогащение данными из интернета и СМИ</p></li>
+</ul>
+</li>
+<li><p>Обработка списков образовательных организаций с уточнением информации запросами в интернет (оценка достоверности)</p>
+<ul class="simple">
+<li><p>Автоматическая верификация через внешние источники</p></li>
+<li><p>Оценка достоверности информации через сопоставление множественных источников</p></li>
+</ul>
+</li>
+<li><p><strong>Обработка опросов населения и независимых отчетов</strong></p>
+<ul class="simple">
+<li><p><strong>NLP-поиск количественных данных</strong> в отчетах ОНФ, социологических исследованиях ВЦИОМ, ФОМ, Левада-центра</p></li>
+<li><p><strong>Извлечение процентных показателей</strong> удовлетворенности различными аспектами образования</p></li>
+<li><p><strong>Количественные оценки проблем</strong> - частота упоминаний, рейтинги важности вопросов</p></li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<div><p><strong>Для граждан РФ (146 млн потенциальных пользователей):</strong> Возможность участия в опросах через Telegram-бот, поиск образовательных программ по региону и специальности, получение персонализированных рекомендаций на основе анализа рынка труда и обратной связи о том, как их мнение влияет на общую картину образовательной системы.</p>
+</div></blockquote>
+<pre  class="mermaid">
+        flowchart LR
+PDF --1--&gt; OCR
+WEB --1--&gt; webparser
+Word --2--&gt; NLP
+Excel --2--&gt; схема
+webparser --2--&gt; NLP
+OCR --2--&gt; NLP
+схема --3--&gt; LLM
+NLP --3--&gt; LLM
+LLM--4--&gt; json
+json -- 5 встраивает данные--&gt; БД
+БД -- 3 Данные онтологий для определения связей --&gt; LLM
+    </pre><div class="highlight-none notranslate"><div class="highlight"><pre><span></span>     От типа документа зависит пайплайн обработки. Все текстовые документы (кроме таблиц) сначала приводятся к машиночитаемому виду. Далее с помощью алгоритмических методов NLP проводится обработка полных текстов для определения отрывков документа содержащих количественные данные. Далее данные передаются в LLM. LLM запрашивает из БД онтологии соответствующие контексту количественных данных и определяет правильную конфигурации встраивания данных в БД. LLM в ответ возвращает json, который обрабатывается алгоритмическим скриптом для добавления данных в графовую базу данных.
+</pre></div>
+</div>
+</section>
+<section id="neo4j">
+<h2><span class="section-number">1.3. </span><strong>Графовая база данных Neo4j</strong><a class="headerlink" href="#neo4j" title="Ссылка на этот заголовок"></a></h2>
+<ol class="arabic simple">
+<li><p>Полные онтологии (Например, уровни образования или научные степени)</p>
+<ul class="simple">
+<li><p><strong>Узлы данных онтологий</strong> определяют параметры для количественных данных</p></li>
+<li><p>Иерархические структуры в соответствии с НПА</p></li>
+<li><p>Автоматическое извлечение и уточнение онтологий из 60,000+ научных статей и 11,000+ НПА</p></li>
+</ul>
+</li>
+<li><p>Количественные данные</p>
+<ul class="simple">
+<li><p><strong>Количественные узлы</strong> содержат временные ряды и метаданные источников</p></li>
+<li><p><strong>Узлы индексов</strong> с математическими формулами расчета и методологией</p></li>
+<li><p>Региональная детализация для всех 89 субъектов РФ</p></li>
+<li><p>Обработка запросов к связанным данным в 10-100 раз быстрее реляционных БД</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Архитектура связей:</strong></p>
+<ul class="simple">
+<li><p>Узлы онтологий → Количественные узлы → Индексы → Полный индекс</p></li>
+<li><p>Поддержка GraphRAG для контекстно-зависимых ответов</p></li>
+<li><p>Векторные embedding для поиска похожих сущностей</p></li>
+</ul>
+<p><strong>Иерархическая структура данных:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Федеральная административная иерархия</strong></p>
+<ul class="simple">
+<li><p>Федеральный уровень → Федеральные округа → Субъекты РФ → Организации</p></li>
+<li><p>Автоматическое выявление связей “часть-целое” в новых данных</p></li>
+<li><p>Проверка математической консистентности: сумма нижестоящих = вышестоящий уровень</p></li>
+</ul>
+</li>
+<li><p><strong>Образовательные уровни с детализацией</strong></p>
+<ul class="simple">
+<li><p>Общее образование → По уровням (дошкольное, начальное, основное, среднее) → По классам → По предметам → По результатам</p></li>
+<li><p>Автоматическая агрегация показателей снизу вверх с контролем целостности</p></li>
+</ul>
+</li>
+<li><p><strong>Высшее профессиональное образование</strong></p>
+<ul class="simple">
+<li><p>ВПО → По направлениям подготовки → По профилям → По компетенциям → По трудоустройству</p></li>
+<li><p>Многомерные кубы данных для OLAP-анализа различных срезов</p></li>
+</ul>
+</li>
+<li><p><strong>Метаданные агрегации</strong></p>
+<ul class="simple">
+<li><p>Сохранение информации о методологии агрегации на каждом уровне иерархии</p></li>
+<li><p>Отслеживание источников данных для каждого узла</p></li>
+<li><p>Версионирование при изменении структуры иерархии</p></li>
+</ul>
+</li>
+</ol>
+<p><img alt="Виды данных" src="_images/grapf_bd_edu.png" /></p>
+<section id="id4">
+<h3><span class="section-number">1.3.1. </span><strong>Построение полного индекса</strong> (на основе всех количественных данных в БД)<a class="headerlink" href="#id4" title="Ссылка на этот заголовок"></a></h3>
+<ol class="arabic simple">
+<li><p>Проверка полноты данных</p>
+<ul class="simple">
+<li><p>Автоматическое выявление пропусков в временных рядах</p></li>
+<li><p>Валидация через сопоставление федеральных и региональных данных (89 субъектов РФ)</p></li>
+<li><p>Контроль качества через иерархические связи (сумма региональных = федеральное значение)</p></li>
+</ul>
+</li>
+<li><p>Макроиндексы</p>
+<ol class="arabic simple">
+<li><p><strong>Наука</strong> - публикационная активность, НИОКР, инновации</p></li>
+<li><p><strong>Воспитание</strong> - качество образовательного процесса, педагогические кадры</p></li>
+<li><p><strong>Экономика</strong> - финансирование, инфраструура, экономическая эффективность</p></li>
+</ol>
+</li>
+<li><p>Автоматическое создание</p>
+<ol class="arabic simple">
+<li><p>Обучение на основе существующих индексов (Научные статьи и НПА)</p></li>
+<li><p><strong>Методологическое обоснование:</strong> установление граничных значений через педагогические исследования</p>
+<ul class="simple">
+<li><p>Пример: среднее количество учеников в классе (n&lt;15 – низкая эффективность; 15&lt;n&lt;25 – норма; 25&lt;n – избыток)</p></li>
+</ul>
+</li>
+<li><p><strong>Математические формулы расчета</strong> с описанием методологии для каждого индекса</p></li>
+<li><p><strong>Интерпретация количественных данных</strong> через сопоставление с нормативами НПА</p></li>
+</ol>
+</li>
+</ol>
+<pre  class="mermaid">
+        graph TD
+    subgraph Легенда
+        A2((&quot;Количественные &lt;/br&gt; узлы&quot;)):::quantity
+        A3((&quot;Узлы &lt;/br&gt; индексов&quot;)):::index
+        A4((&quot;Полный &lt;/br&gt; индекс&quot;)):::totalindex
+    end
+
+    subgraph Схема
+        B1((&quot;Численность &lt;/br&gt; преподавателей&quot;)):::quantity
+        B2((&quot;Численность &lt;/br&gt; обучающихся&quot;)):::quantity
+        B3((&quot;Количество &lt;/br&gt; классов&quot;)):::quantity
+        B4((&quot;__ &quot;)):::quantity
+        B5((&quot;__ &quot;)):::quantity
+        B6((&quot;__ &quot;)):::quantity
+        B7((&quot;__ &quot;)):::quantity
+        C1((&quot;Среднее количество &lt;/br&gt; учеников на учителя&quot;)):::index
+        C2((&quot;Среднее количество &lt;/br&gt; учеников в классе&quot;)):::index
+        C3((&quot;__&quot;)):::index
+        C4((&quot;__&quot;)):::index
+        C5((&quot;__&quot;)):::index
+        D1((&quot;Индекс достаточности &lt;/br&gt; кадрового обеспечения&quot;)):::index
+        E1((&quot;Полный &lt;/br&gt; индекс&quot;)):::totalindex
+        B1 --&gt; C1
+        B2 --&gt; C1
+        B2 --&gt; C2
+        B3 --&gt; C2
+        B4 --&gt; C3
+        B5 --&gt; C3
+        B6 --&gt; C3
+        B5 --&gt; C4
+        B7 --&gt; C4
+        C3 --&gt; C5
+        C4 --&gt; C5
+        C5 --&gt; E1
+        C1 --&gt; D1
+        C2 --&gt; D1
+        D1 --&gt; E1
+    end
+
+    classDef ontology fill:#d4b6fa,stroke:#aaa;
+    classDef quantity fill:#b6eaff,stroke:#aaa;
+    classDef index fill:#c7fddb,stroke:#aaa;
+    classDef totalindex fill:#57d17d,stroke:#aaa;
+    </pre></section>
+<section id="id5">
+<h3><span class="section-number">1.3.2. </span><strong>Прогнозная модель</strong><a class="headerlink" href="#id5" title="Ссылка на этот заголовок"></a></h3>
+<ol class="arabic simple">
+<li><p><strong>Автоматическое восстановление пропущенных данных</strong></p>
+<ul class="simple">
+<li><p>Система самостоятельно выявляет и заполняет пробелы в исторических данных</p></li>
+<li><p>Использует данные похожих регионов/показателей для восстановления недостающей информации</p></li>
+<li><p>Учитывает неопределенность при отсутствии достоверных данных</p></li>
+<li><p>Обеспечивает непрерывность временных рядов для качественного прогнозирования</p></li>
+</ul>
+</li>
+<li><p><strong>Согласование разноуровневых данных</strong></p>
+<ul class="simple">
+<li><p>Автоматически приводит к согласованности данные федерального и региональных уровней</p></li>
+<li><p>Обеспечивает математическое соответствие: сумма региональных = федеральное значение</p></li>
+<li><p>Устраняет противоречия между различными источниками данных</p></li>
+<li><p>Создает единую иерархическую структуру для всех 89 субъектов РФ</p></li>
+</ul>
+</li>
+<li><p><strong>Включение региональных данных в прогнозную модель</strong></p>
+<ul class="simple">
+<li><p><strong>Spatial-temporal modeling</strong> для повышения точности федеральных прогнозов на 15-30%</p></li>
+<li><p>Использование данных по всем 89 субъектам РФ для улучшения качества прогнозов</p></li>
+<li><p>Учет пространственных корреляций и взаимовлияния регионов</p></li>
+<li><p>Агрегация региональных прогнозов до федерального уровня с проверкой консистентности</p></li>
+</ul>
+</li>
+<li><p><strong>Использование связанных показателей (внешние регрессоры)</strong></p>
+<ul class="simple">
+<li><p>Сопоставление данных из разных источников в единые временные ряды</p></li>
+<li><p>Корреляционный анализ взаимосвязанных показателей образования</p></li>
+<li><p>Учет макроэкономических и демографических факторов</p></li>
+<li><p>Автоматическое создание дополнительных признаков на основе исторических закономерностей</p></li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<div><p><strong>Для органов государственного управления:</strong> Министерство просвещения РФ, Министерство науки и высшего образования РФ, Рособрнадзор, аппарат Правительства РФ и 89 региональных департаментов образования используют точные прогнозы для принятия обоснованных решений по распределению бюджетов, планированию образовательной политики и подготовки стратегических документов развития системы образования на 2025-2030 годы.</p>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p><strong>Комбинированное прогнозирование</strong></p>
+<ul class="simple">
+<li><p>Объединение результатов различных алгоритмов для повышения точности на 15-30%</p></li>
+<li><p>Автоматический выбор оптимальной комбинации методов для каждого показателя</p></li>
+<li><p>Учет структурных изменений в образовательной системе</p></li>
+<li><p>Адаптация к различным горизонтам прогнозирования</p></li>
+</ul>
+</li>
+<li><p><strong>Прогнозирование контингента (дополнительная проверка через совпадение суммы обучающихся)</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Направление подготовки</strong> - анализ востребованности специальностей</p></li>
+<li><p><strong>Трудоустройство</strong> - прогноз трудоустройства по направлениям и регионам</p>
+<ul class="simple">
+<li><p>Соответствие работы специальности, динамика за 10 лет</p></li>
+<li><p>Медианные зарплаты по направлениям и регионам</p></li>
+<li><p>Прогноз потребности в кадрах с учетом технологических трендов</p></li>
+</ul>
+</li>
+<li><p><strong>Количество обучающихся</strong> - демографические тренды и миграция</p>
+<ul class="simple">
+<li><p>Проверка консистентности через математическое соответствие сумм</p></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<pre  class="mermaid">
+        flowchart TD
+    A[Сырые ряды и региональные данные] --&quot;Методы: Интерполяция (линейная, полиномиальная),&lt;br/&gt;Kalman filter, KNN-imputation, Байесовские модели&lt;br/&gt;Инструменты: scikit-learn, statsmodels, PyMC&quot;--&gt; B[Обработка пропущенных значений]
+    
+    B --&quot;Методы: Bottom-up/Top-down reconciliation,&lt;br/&gt;Padding, Truncation&lt;br/&gt;Инструменты: HierarchicalForecast, Custom padding functions&quot;--&gt; C[Агрегация и нормализация рядов]
+    
+    C --&quot;Методы: Лаги, средние, сезонность, внешние регрессоры&lt;br/&gt;Инструменты: tsfresh, sktime, FRED API&quot;--&gt; D[Инженерия признаков]
+    
+    D --&quot;Методы: BSTS (байес. модели), LightGBM, LSTM/NN, ARIMA, Prophet&lt;br/&gt;Инструменты: PyMC, bsts (R), LightGBM, PyTorch, statsmodels&quot;--&gt; E[Обучение моделей]
+    
+    E --&quot;Методы: Стекинг, взвешенное усреднение, Bayesian Model Averaging (BMA)&lt;br/&gt;Инструменты: scikit-learn, PyMC, XGBoost&quot;--&gt; F[Ансамблирование моделей]
+    
+    F --&quot;Методы: Time Series Cross-Validation, Bayesian Optimization&lt;br/&gt;Инструменты: sktime, Optuna, scikit-optimize&quot;--&gt; G[Валидация и оптимизация]
+    
+    G --&quot;Методы: Модельное развертывание, мониторинг&lt;br/&gt;Инструменты: MLflow, Docker, Kubernetes&quot;--&gt; H[Продакшн/Деплой]
+    
+    H --&gt; I[Реальный прогноз]
+    </pre><hr class="docutils" />
+<p>Для прогнозной модели используются 3 метода повышения прогноза:</p>
+<ul class="simple">
+<li><p>Сопоставление данных из разных источников в одну серию данных (анализ неструктурированных данных из прошлого раздела функциональных требований)</p></li>
+<li><p>Использования связанных показателей (внешние регрессоры)</p></li>
+<li><p>Региональные данные (для всех статистических данных есть разбиение федеральных значений на региональные данные, что также можно использовать для повышения точности прогноза)</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="id6">
+<h2><span class="section-number">1.4. </span><strong>Поиск количественных данных</strong><a class="headerlink" href="#id6" title="Ссылка на этот заголовок"></a></h2>
+<ol class="arabic simple">
+<li><p>Сверка данных из разных источников</p>
+<ul class="simple">
+<li><p><strong>RAG по количественным узлам</strong> для сопоставления эмбеддингов запросов и показателей</p></li>
+<li><p>Формирование контекста из связей между узлами графа</p></li>
+<li><p>Определение пересекающихся численных узлов для всех релевантных онтологий</p></li>
+</ul>
+</li>
+<li><p>Построение индекса в соответствии с запросом пользователя</p>
+<ul class="simple">
+<li><p>Поиск релевантных онтологий через embedding запроса пользователя</p></li>
+<li><p>Запрос внешних связей для выбранных узлов</p></li>
+<li><p>Получение релевантных индексов через граф связей</p></li>
+<li><p><strong>GraphRAG:</strong> повышение точности ответов на 25-40% vs традиционные подходы</p></li>
+</ul>
+</li>
+<li><p>Динамический дашборд</p>
+<ul class="simple">
+<li><p><strong>Интеллектуальная визуализация:</strong> автоматический выбор релевантных аналитических срезов</p></li>
+<li><p>Шаблоны графиков с правилами использования для различных типов данных</p></li>
+<li><p>Региональные карты, временные ряды, сравнительная аналитика</p></li>
+<li><p>Алгоритмическое построение и извлечение данных после LLM-анализа</p></li>
+</ul>
+</li>
+</ol>
+<blockquote>
+<div><p><strong>Для НИИ и университетов:</strong> Федеральные университеты (КФУ, ТГУ, ВШЭ, МГППУ, РАНХиГС) и федеральные НИИ (РАО, ИРПО, ФИПИ, ФИОКО, ВНИИ труда и другие) используют GraphRAG для проведения масштабных исследований эффективности образовательных программ, получения детализированной аналитики по каждому вузу и построения корреляционных моделей с минимизацией галлюцинаций до 15%.</p>
+</div></blockquote>
+<pre  class="mermaid">
+        graph TD
+    %% Начало процесса
+    USER_QUERY[Запрос пользователя]
+
+    %% Параллельная обработка
+    EMBEDDING[embedding]
+    ONTOLOGY_QUERY[Запрос релевантных&lt;br/&gt;онтологий]
+
+    %% RAG процесс
+    RAG[RAG по количественным&lt;br/&gt;узлам]
+
+    %% Обработка онтологий
+    RELEVANT_NODES[Выбор релевантных&lt;br/&gt;узлов]
+    EXTERNAL_LINKS[Запрос внешних связей&lt;br/&gt;для выбранных узлов]
+
+    %% Поиск недостающих данных
+    MISSING_NODES[Определение&lt;br/&gt;пересекающихся&lt;br/&gt;численных узлов для&lt;br/&gt;всех онтологий]
+
+    %% Боковая проверка
+    PARENT_CHILD_QUERY[Запрос узлов онтологий&lt;br/&gt;дочерних и&lt;br/&gt;родительских&lt;br/&gt;до ближайшего,&lt;br/&gt;который будет&lt;br/&gt;содержать&lt;br/&gt;количественные данные]
+
+    %% Получение индексов
+    INDEX_RETRIEVAL[Получение через связи&lt;br/&gt;релевантных индексов]
+
+    %% Финальная генерация
+    ANSWER_GENERATION[Генерация ответа]
+
+    %% Связи
+    USER_QUERY --&gt; EMBEDDING
+    USER_QUERY --&gt; ONTOLOGY_QUERY
+
+    EMBEDDING --&gt; RAG
+    ONTOLOGY_QUERY --&gt; RELEVANT_NODES
+
+    RELEVANT_NODES --&gt; EXTERNAL_LINKS
+    EXTERNAL_LINKS --&gt; MISSING_NODES
+
+    MISSING_NODES --&gt; |Узлы не найдены| PARENT_CHILD_QUERY
+    PARENT_CHILD_QUERY --&gt; EXTERNAL_LINKS
+
+    RAG --&gt; INDEX_RETRIEVAL
+    MISSING_NODES --&gt; ANSWER_GENERATION
+
+    INDEX_RETRIEVAL --&gt; ANSWER_GENERATION
+    </pre><p><strong>Контроль качества данных:</strong></p>
+<ol class="arabic simple">
+<li><p><strong>Автоматическое выявление аномалий и выбросов</strong></p>
+<ul class="simple">
+<li><p>Статистический анализ для обнаружения резких изменений показателей</p></li>
+<li><p>Выявление несоответствий региональных данных федеральным трендам</p></li>
+<li><p>Обнаружение противоречий между связанными показателями</p></li>
+<li><p>Идентификация подозрительно “идеальных” данных</p></li>
+</ul>
+</li>
+<li><p><strong>Кросс-валидация данных из разных источников</strong></p>
+<ul class="simple">
+<li><p>Сопоставление данных Росстата с ведомственной статистикой</p></li>
+<li><p>Проверка соответствия данных сайтов организаций официальным отчетам</p></li>
+<li><p>Сравнение субъективных оценок опросов с объективными показателями</p></li>
+<li><p>Валидация через сопоставление множественных независимых источников</p></li>
+</ul>
+</li>
+<li><p><strong>Контроль полноты данных</strong></p>
+<ul class="simple">
+<li><p>Отслеживание полноты заполнения обязательных показателей по всем 89 регионам</p></li>
+<li><p>Автоматические уведомления о критических пропусках в данных</p></li>
+<li><p>Мониторинг своевременности поступления отчетности</p></li>
+</ul>
+</li>
+<li><p><strong>Версионирование исторических данных</strong></p>
+<ul class="simple">
+<li><p>Сохранение всех версий данных с метками времени изменения</p></li>
+<li><p>Отслеживание источника каждого изменения (автоматическое/ручное/импорт)</p></li>
+<li><p>Возможность восстановления данных на любую историческую дату</p></li>
+<li><p>Аудит-лог операций с указанием пользователя и причины изменения</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Исключение галлюцинаций в работе llm</strong></p>
+<p><em>Пример (нетривиальный). В БД находится информация только о студентах, но не содержит информацию о школах, СПО и ДПО. На запрос пользователя о численности обучающихся llm использует данные из БД для ответа, не уточняя отсутствующие данные.</em></p>
+<p>Наличие полных онтологий в соответствии с НПА (например, иерархия и связи уровней образования) позволяет llm не только предоставить данные из БД в точной формулировке, но и определить недостающие данные в соответствии с запросом пользователя.</p>
+<p><strong>Исключение галлюцинаций:</strong></p>
+<ul class="simple">
+<li><p>Полные онтологии позволяют LLM определять недостающие данные</p></li>
+<li><p>Снижение ложных утверждений до 15% (базовый RAG: 25-30%)</p></li>
+<li><p>Автоматическое указание источников информации в метаданных узлов</p></li>
+</ul>
+</section>
+<section id="id7">
+<h2><span class="section-number">1.5. </span><strong>Анализ и рекомендации</strong><a class="headerlink" href="#id7" title="Ссылка на этот заголовок"></a></h2>
+<ol class="arabic simple">
+<li><p>Оценка предлагаемых проектов</p>
+<ul class="simple">
+<li><p>NLP извлечение целевых показателей → поиск в БД через GraphRAG → пересчет индексов</p></li>
+<li><p>Критерии: влияние на показатели, соответствие НПА, экономическая эффективность</p></li>
+<li><p><strong>Моделирование каскадных эффектов:</strong> влияние изменений на смежные показатели образовательной системы</p></li>
+<li><p><strong>Многоуровневые взаимосвязи:</strong></p>
+<ul>
+<li><p>Финансирование → качество материальной базы → результаты обучения</p></li>
+<li><p>Квалификация педагогов → методы обучения → достижения учащихся</p></li>
+<li><p>Демографические изменения → нагрузка на систему → качество образования</p></li>
+<li><p>Цифровизация → изменения педагогических технологий → новые компетенции</p></li>
+</ul>
+</li>
+<li><p><strong>Временные лаги эффектов:</strong></p>
+<ul>
+<li><p>Немедленные (до 1 года): изменения контингента, кадровые перестановки</p></li>
+<li><p>Краткосрочные (1-3 года): влияние на результаты ГИА, поступление в вузы</p></li>
+<li><p>Среднесрочные (3-7 лет): изменения в трудоустройстве, карьерных траекториях</p></li>
+<li><p>Долгосрочные (7-15 лет): влияние на инновационный потенциал регионов</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Сценарии “что-если”</p>
+<ul class="simple">
+<li><p>Временные горизонты: 1-2 года, 3-5 лет, до 10 лет (MAPE &lt;8-20%)</p></li>
+<li><p>Факторы: демография, технологии, экономика, НПА</p></li>
+<li><p>Пространственно-временное моделирование (89 регионов)</p></li>
+</ul>
+</li>
+<li><p>Перечень возможных решений</p>
+<ul class="simple">
+<li><p>Справочник: НПА + 60,000+ научных статей + практические кейсы</p></li>
+<li><p>NLP классификация решений, ранжирование эффективности</p></li>
+</ul>
+</li>
+<li><p>Оценка рынка образования</p>
+<ul class="simple">
+<li><p><strong>Анализ трудоустройства:</strong> показатели по направлениям/регионам, динамика 10 лет</p></li>
+<li><p><strong>Зарплатная аналитика:</strong> медианные зарплаты, рост в первые годы</p></li>
+<li><p><strong>Прогноз кадров:</strong> 1-2 года, 3-5 лет, до 10 лет с учетом технологий</p></li>
+</ul>
+</li>
+<li><p>Конкурентный анализ - векторное сравнение организаций и их параметров(образовательные программы, структурные подразделения, контингент обучающихся и преподавателей, финансовая отчетность) через GraphRAG</p></li>
+<li><p>Контрповестка - автогенерация опровержений для негатива в соцсетях с аргументацией на основе статистичеких данных</p></li>
+</ol>
+<blockquote>
+<div><p><strong>Для вузов и образовательных организаций:</strong> Частные университеты, EdTech стартапы, платформы онлайн-образования, консалтинговые компании и разработчики образовательного контента используют систему для конкурентного анализа, прогнозирования популярных программ, анализа трудоустройства выпускников по специальностям, планирования новых образовательных программ и оценки их востребованности на рынке труда для повышения конкурентоспособности.</p>
+</div></blockquote>
+<section id="id8">
+<h3><span class="section-number">1.5.1. </span>Архитектура мультиагентой ИИ системы<a class="headerlink" href="#id8" title="Ссылка на этот заголовок"></a></h3>
+<pre  class="mermaid">
+        flowchart LR
+ subgraph g1[&quot;Прогнозно-аналитическая мультиагентная ИИ система анализа социально-экономических показателей сферы образования&quot;]
+        n1[&quot;Графовая БД&quot;]--1 Получает данные для ответа за запрос--&gt;g5
+         subgraph g5[&quot;Агент аналитик &lt;/br&gt; инструменты&quot;]
+            n4[Подбор или расчет индекса в соотвествии с запросом]
+            n5[Построение динамического дашборда по реквизитам индекса]
+            n6[Расчет прогноза динамики данных]
+         end
+         subgraph g3[&quot;Агент парсер &lt;/br&gt; инструменты&quot;]
+            n7[Обработка таблицы]
+            n8[Поиск в интеренете]
+            n9[Обработка текста]
+         end
+        g3--1 Добавляет данные поиска в интернете--&gt;n1
+        g5--1 Если в БД нет данных--&gt;g3
+        g3--2 Ежегодная обработка статистических данных--&gt;n1
+
+  end
+    </pre></section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="index.html" class="btn btn-neutral float-left" title="Прогнозно-аналитическая мультиагентная ИИ система" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="uses_case.html" class="btn btn-neutral float-right" title="2. Сценарии использования" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, СССО. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Найти все блоки с классом mermaid и инициализировать их
+        const mermaidBlocks = document.querySelectorAll('pre.mermaid');
+        mermaidBlocks.forEach(function(block) {
+            // Создать div элемент вместо pre
+            const div = document.createElement('div');
+            div.className = 'mermaid';
+            div.innerHTML = block.textContent;
+            
+            // Заменить pre на div
+            block.parentNode.replaceChild(div, block);
+        });
+        
+        // Перезапустить mermaid
+        mermaid.init();
+    });
+</script>
+
+
+</body>
+</html>

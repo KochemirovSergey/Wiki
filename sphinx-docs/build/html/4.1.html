@@ -6,10 +6,10 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>15. 4.1. Количество сотрудников, в том числе занятых выполнением проекта, направления их деятельности и их квалификация с приложением подтверждающих документов &mdash; документация Прогнозно-аналитическая ИИ система 1.0</title>
+  <title>7. 4.1. Количество сотрудников, в том числе занятых выполнением проекта, направления их деятельности и их квалификация с приложением подтверждающих документов &mdash; документация Прогнозно-аналитическая ИИ система 1.0</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
-      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=7d1ae049" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=fc2992fd" />
 
   
       <script src="_static/jquery.js?v=5d32c60e"></script>
@@ -18,11 +18,57 @@
       <script src="_static/doctools.js?v=9bcbadda"></script>
       <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
       <script src="_static/translations.js?v=cd1d70c9"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+      <script type="module">
+mermaid.initialize({
+    theme: 'default',
+    themeVariables: {
+        primaryColor: '#f39c12',
+        primaryTextColor: '#2c3e50',
+        primaryBorderColor: '#e74c3c',
+        lineColor: '#34495e',
+        secondaryColor: '#ecf0f1',
+        tertiaryColor: '#fff'
+    },
+    startOnLoad: true,
+    flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true
+    }
+});
+</script>
+      <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+      <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Алфавитный указатель" href="genindex.html" />
     <link rel="search" title="Поиск" href="search.html" />
-    <link rel="next" title="16. 4.2. Опыт команды в реализации подобных проектов." href="4.2.html" />
-    <link rel="prev" title="14. 3.7 Стратегия продвижения продукта на рынок" href="3.7.html" /> 
+    <link rel="next" title="8. 4.3. Организационная структура управления. Схема привлечения новых специалистов." href="4.3.html" />
+    <link rel="prev" title="6. 3.4. Целевые сегменты потребителей создаваемого продукта и оценка платежеспособного спроса. Потенциальные клиенты (заказчики)" href="3.4.html" />
+ 
+<script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: 'default',
+        themeVariables: {
+            primaryColor: '#f39c12',
+            primaryTextColor: '#2c3e50',
+            primaryBorderColor: '#e74c3c',
+            lineColor: '#34495e',
+            secondaryColor: '#ecf0f1',
+            tertiaryColor: '#fff'
+        },
+        flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true
+        }
+    });
+</script>
+
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -45,132 +91,55 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
               <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="1.html">1. 1. Участник отбора:</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="1.html#id2">1.1. 1.1. Название проекта</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.html#id3">1.2. 1.2. Фирменное наименование участника отбора:**</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.html#id4">1.3. 1.3. Распределение уставного капитала (учредители и доли):</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.html#id5">1.4. 1.4. Адрес предприятия:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.html#id6">1.5. 1.5. Сайт предприятия:**</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.html#id7">1.6. 1.6. Область деятельности, виды продукции и услуг:**</a></li>
-<li class="toctree-l2"><a class="reference internal" href="1.html#id8">1.7. 1.7. Фактическая выручка за 2022-2024 годы по годам:**</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.1.html">1. 2.1. Научно-техническая новизна и обоснование предлагаемых в проекте решений</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.1.html#id2">1.1. Показатели повышения точности и производительности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.html#id3">1.2. Научное обоснование с конкретными исследованиями</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.1.html#id4">1.3. 2.2.3. Параметры продукта</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="2.1.html">2. 2.1. Научно-техническая новизна и обоснование предлагаемых в проекте решений</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.1.html#id2">2.1. Показатели повышения точности и производительности</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.1.html#id3">2.2. Научное обоснование с конкретными исследованиями</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.1.html#id4">2.3. Фундаментальная научная новизна</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.2.html">2. 2.2. Создаваемый коммерческий продукт и его характеристики</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.2.html#id2">2.1. 2.2.1. Функциональное назначение</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.2.html#id3">2.2. 2.2.2. Основные потребительские качества</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="2.2.html">3. 2.2. Создаваемый коммерческий продукт и его характеристики</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.2.html#id2">3.1. 2.2.1. Функциональное назначение</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2.html#id3">3.2. 2.2.2. Основные потребительские качества</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.2.html#id4">3.3. 2.2.3. Параметры продукта</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.3.html">3. 2.3. Методы и способы решения поставленных задач</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.3.html#id2">3.1. Архитектура мультиагентой ИИ системы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3.html#id3">3.2. Анализ неструктурированных данных</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3.html#id4">3.3. Построение полного индекса</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3.html#id5">3.4. Прогнозная модель</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.3.html#id6">3.5. Поиск количественных данных</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="2.3.html">4. 2.3. Методы и способы решения поставленных задач</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.3.html#id2">4.1. Архитектура мультиагентой ИИ системы</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3.html#id3">4.2. Анализ неструктурированных данных</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3.html#id4">4.3. Построение полного индекса</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3.html#id5">4.4. Прогнозная модель</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.3.html#id6">4.5. Поиск количественных данных</a></li>
+<li class="toctree-l1"><a class="reference internal" href="2.5.html">4. 2.5. Имеющийся у коллектива участника отбора научно-технический задел</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2.5.html#id2">4.1. Прототип 1 (общий) – основные функции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5.html#id3">4.2. Прототип 2 – агент-аналитик</a></li>
+<li class="toctree-l2"><a class="reference internal" href="2.5.html#id4">4.3. Праваи на интеллектуальную собственность</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="2.4.html">5. 2.4. Наименование и производитель планируемой к замещению продукции</a></li>
-<li class="toctree-l1"><a class="reference internal" href="2.5.html">6. 2.5. Имеющийся у коллектива участника отбора научно-технический задел</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.5.html#id2">6.1. Прототип 1 (общий) – основные функции</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.5.html#id3">6.2. Прототип 2 – агент-аналитик</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.5.html#id4">6.3. Праваи на интеллектуальную собственность</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.2.html">5. 3.2. Сравнение технико-экономических характеристик создаваемого инновационного продукта с зарубежными и отечественными аналогами</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3.2.html#id2">5.1. Аналоги по бизнес-модели:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2.html#id3">5.2. Аналоги по используемым технологиям:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2.html#id4">5.3. Аналоги по обрабатываемой информации:</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.2.html#o-2">5.4. Таблица № 2</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="2.6.html">7. 2.6. Планы по созданию и защите интеллектуальной собственности</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="2.6.html#id2">7.1. Авторские права</a></li>
-<li class="toctree-l2"><a class="reference internal" href="2.6.html#id3">7.2. Стратегия защиты интеллектуальной собственности и технологического суверенитета</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3.4.html">6. 3.4. Целевые сегменты потребителей создаваемого продукта и оценка платежеспособного спроса. Потенциальные клиенты (заказчики)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3.4.html#id2">6.1. Сегментация потребителей по платежеспособности и потребностям</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3.4.html#id3">6.2. Дополнительные сегменты</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="3.1.html">8. 3.1. Объем и емкость рынка продукта</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.1.html#edtech-science-ai-govtech">8.1. Сводная таблица отчетов по рынкам EdTech, Science AI и GovTech</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.1.html#id2">8.2. Статистика</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">7. 4.1. Количество сотрудников, в том числе занятых выполнением проекта, направления их деятельности и их квалификация с приложением подтверждающих документов</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">7.1. Процессы взаимодействия ролей</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="3.2.html">9. 3.2. Сравнение технико-экономических характеристик создаваемого инновационного продукта с зарубежными и отечественными аналогами</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.2.html#id2">9.1. Аналоги по бизнес-модели:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.2.html#id3">9.2. Аналоги по используемым технологиям:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.2.html#id4">9.3. Аналоги по обрабатываемой информации:</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.2.html#o-2">9.4. Таблица № 2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4.3.html">8. 4.3. Организационная структура управления. Схема привлечения новых специалистов.</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="4.3.html#id2">8.1. Схема ответственности и взаимодействия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4.3.html#id3">8.2. Волонтерская модель развития</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="3.3.html">10. 3.3. Планируемая стоимость продукта. Расчет себестоимости</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.3.html#id2">10.1. Структура операционных издержек</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3.html#id3">10.2. Структура издержек на создание БД</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.3.html#id4">10.3. Структура издержек на локальное развертывание по тарифу 4</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="3.4.html">11. 3.4. Целевые сегменты потребителей создаваемого продукта и оценка платежеспособного спроса. Потенциальные клиенты (заказчики)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.4.html#id2">11.1. Сегментация потребителей по платежеспособности и потребностям</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.4.html#id3">11.2. Дополнительные сегменты</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.4.html#id4">11.3. Оценка платежеспособного спроса</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="3.5.html">12. 3.5 Информация об имеющихся соглашениях о намерениях, договорах поставки, письмах от российских организаций, подтверждающих востребованность планируемой к созданию продукции или услуги на ее основе, представленных в составе заявки на конкурс</a></li>
-<li class="toctree-l1"><a class="reference internal" href="3.6.html">13. 3.6. Описание бизнес-модели проекта. Производственный план и план продаж</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.6.html#id2">13.1. Описание бизнес-модели проекта (модель Остервальдера)</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.6.html#id3">13.2. Производственный план</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.6.html#id4">13.3. План продаж</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="3.7.html">14. 3.7 Стратегия продвижения продукта на рынок</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="3.7.html#id2">14.1. Концептуальные основы двухэтапной стратегии</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7.html#id3">14.2. Этап 1 — Массовое внедрение и академическое позиционирование</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7.html#id4">14.3. Этап 2 — Включение в систему государственного управления образованием</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7.html#opensource">14.4. Примеры успешных opensource-стратегий в аналитике</a></li>
-<li class="toctree-l2"><a class="reference internal" href="3.7.html#id5">14.5. Общие принципы opensource-стратегии для аналитической платформы</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">15. 4.1. Количество сотрудников, в том числе занятых выполнением проекта, направления их деятельности и их квалификация с приложением подтверждающих документов</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#id2">15.1. Организационная структура команды</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#id3">15.2. Процессы взаимодействия ролей</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="4.2.html">16. 4.2. Опыт команды в реализации подобных проектов.</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="4.2.html#id2">16.1. Схема участия команды в проектах</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="4.3.html">17. 4.3. Организационная структура управления. Схема привлечения новых специалистов.</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="4.3.html#id2">17.1. Схема ответственности и взаимодействия</a></li>
-<li class="toctree-l2"><a class="reference internal" href="4.3.html#id3">17.2. Волонтерская модель развития</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="5.1.html">18. 5.1. Календарный план выполнения проекта (план составляется как на период реализации проекта за счет средств гранта, так и на период в течение 5 лет после завершения финансирования Фонда) (Таблица № 4).</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.2.html">19. 5.2 Расшифровка сметы расходов по приобретению оборудования, комплектующих и материалов , программных средств (Таблица № 5) (при наличии).</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.3-4-5.html">20. 5.3. Обоснование привлечения соисполнителей (при наличии).</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="5.3-4-5.html#id2">20.1. 5.3.1. Информация о привлекаемом соисполнителе и его компетенциях.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.3-4-5.html#id3">20.2. 5.3.2. Перечень выполняемых работ с детализацией.</a></li>
-<li class="toctree-l2"><a class="reference internal" href="5.3-4-5.html#id4">20.3. 5.3.3. Обоснование необходимости привлечения соисполнителей.</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="5.3-4-5.html#id5">21. 5.4. Информация о наличии основных средств, а также необходимых площадей для выполнения проекта и дальнейшей коммерциализации заявленной продукции, подтверждаемая документами, представленными в составе заявки на конкурс (договоры аренды/собственности лабораторных и производственных площадей, оборудования).</a></li>
-<li class="toctree-l1"><a class="reference internal" href="5.3-4-5.html#id6">22. 5.5. Описание производственных процессов, с указанием планируемого места производства, перечень материалов и комплектующих, планируемых к использованию, с указанием страны производства указанных материалов и комплектующих (если применимо).</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6.1.html">23. 6.1. Общий объем финансирования проекта, в том числе объем внебюджетных инвестиций или собственных средств, источники средств и формы их получения.</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6.2.html">24. 6.2. Ранее привлеченное финансирование на реализацию проекта из бюджетных и внебюджетных источников (с указанием этих источников).</a></li>
-<li class="toctree-l1"><a class="reference internal" href="6.3.html">25. 6.3. Основные плановые экономические показатели (расходы на производство, прибыль, чистая прибыль, рентабельность выпускаемого продукта) к концу реализации проекта.</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="6.3.html#id2">25.1. Ключевые экономические параметры проекта</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.3.html#id3">25.2. Таблица основных плановых экономических показателей</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="6.4.html">26. 6.4. Поквартальный план движения денежных средств с учётом затрат на проект</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="6.4.html#id2">26.1. 1. Движение денежных средств за 2026 год по кварталам</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.4.html#id3">26.2. 2. Движение денежных средств за 2027 год по кварталам</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.4.html#id4">26.3. 3. Динамика баланса наличности</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="6.5.html">27. 6.5 Возможные типы и источники рисков, меры по их уменьшению</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="6.5.html#id2">27.1. Экономическая эффективность для государства</a></li>
-<li class="toctree-l2"><a class="reference internal" href="6.5.html#id3">27.2. Обоснование коммерческой модели реализации</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="glossary.html">28. Глоссарий</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="glossary.html#id2">28.1. Научные термины</a></li>
-<li class="toctree-l2"><a class="reference internal" href="glossary.html#id3">28.2. Термины графовой БД</a></li>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">9. Глоссарий</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html#id2">9.1. Научные термины</a></li>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html#id3">9.2. Термины графовой БД</a></li>
 </ul>
 </li>
 </ul>
@@ -189,7 +158,7 @@
           <div role="navigation" aria-label="Навигация по страницам">
   <ul class="wy-breadcrumbs">
       <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active"><span class="section-number">15. </span>4.1. Количество сотрудников, в том числе занятых выполнением проекта, направления их деятельности и их квалификация с приложением подтверждающих документов</li>
+      <li class="breadcrumb-item active"><span class="section-number">7. </span>4.1. Количество сотрудников, в том числе занятых выполнением проекта, направления их деятельности и их квалификация с приложением подтверждающих документов</li>
       <li class="wy-breadcrumbs-aside">
             <a href="_sources/4.1.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
       </li>
@@ -200,134 +169,12 @@
            <div itemprop="articleBody">
              
   <section id="id1">
-<h1><span class="section-number">15. </span>4.1. Количество сотрудников, в том числе занятых выполнением проекта, направления их деятельности и их квалификация с приложением подтверждающих документов<a class="headerlink" href="#id1" title="Ссылка на этот заголовок"></a></h1>
-<p>Таблица № 3</p>
-<table class="docutils align-default">
-<thead>
-<tr class="row-odd"><th class="head"><p>№ п/п</p></th>
-<th class="head"><p>ФИО сотрудника</p></th>
-<th class="head"><p>Тип трудоустройства</p></th>
-<th class="head"><p>Роль в команде проекта</p></th>
-<th class="head"><p>Квалификация</p></th>
-<th class="head"><p>Опыт реализации проектов по схожей тематике (разработка/коммерциализация)</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>1</p></td>
-<td><p>Линников Олег Михайлович</p></td>
-<td><p>Штат</p></td>
-<td><p>Продажи</p></td>
-<td><p>МФТИ</p></td>
-<td><p>Разработка платформы БД стартапов; Продажи БД стартапов</p></td>
-</tr>
-<tr class="row-odd"><td><p>2</p></td>
-<td><p>Милов Максим Владимирович</p></td>
-<td><p>Штат</p></td>
-<td><p>Исполнительный директор</p></td>
-<td><p>МФТИ</p></td>
-<td><p>Разработка платформы БД стартапов; Продажи БД стартапов</p></td>
-</tr>
-<tr class="row-even"><td><p>3</p></td>
-<td><p>Кочемиров Сергей Алексеевич</p></td>
-<td><p>Совместительство</p></td>
-<td><p>Product owner</p></td>
-<td><p>МФТИ, классный чин</p></td>
-<td><p>ГИСы, системы управления образованием и образовательными организациями</p></td>
-</tr>
-<tr class="row-odd"><td><p>4</p></td>
-<td><p>Кожевников Никита Александрович</p></td>
-<td><p>Совместительство</p></td>
-<td><p>Методолог</p></td>
-<td><p>МФТИ</p></td>
-<td><p>ГИСы, системы управления образованием и образовательными организациями</p></td>
-</tr>
-<tr class="row-even"><td><p>5</p></td>
-<td><p>Карлов Владислав Валерьевич</p></td>
-<td><p>Совместительство</p></td>
-<td><p>Тимлид</p></td>
-<td><p>МФТИ</p></td>
-<td><p>Реализация интерфейсов, работа в крупных ИТ компаниях, высокие компетенции в разработке</p></td>
-</tr>
-<tr class="row-odd"><td><p>6</p></td>
-<td><p>Исхаков Алмаз</p></td>
-<td><p>Совместительство</p></td>
-<td><p>Продажи</p></td>
-<td><p>МФТИ</p></td>
-<td><p>ГИСы, системы управления образованием и образовательными организациями</p></td>
-</tr>
-<tr class="row-even"><td><p>7</p></td>
-<td><p>Мартынов Василий</p></td>
-<td><p>Совместительство</p></td>
-<td><p>Политрук</p></td>
-<td><p>МФТИ</p></td>
-<td><p>ГИСы, системы управления образованием и образовательными организациями</p></td>
-</tr>
-<tr class="row-odd"><td><p>8</p></td>
-<td><p>Линникова Александра Олеговна</p></td>
-<td><p>Совместительство</p></td>
-<td><p>Продажи</p></td>
-<td><p>БД стартапов</p></td>
-<td><p>БД стартапов</p></td>
-</tr>
-<tr class="row-even"><td><p>9</p></td>
-<td><p>Каюмов Яков Габдулаевич</p></td>
-<td><p>Совместительство</p></td>
-<td><p>Разработчик</p></td>
-<td><p>МФТИ</p></td>
-<td><p>БД стартапов</p></td>
-</tr>
-</tbody>
-</table>
+<h1><span class="section-number">7. </span>4.1. Количество сотрудников, в том числе занятых выполнением проекта, направления их деятельности и их квалификация с приложением подтверждающих документов<a class="headerlink" href="#id1" title="Ссылка на этот заголовок"></a></h1>
 <hr class="docutils" />
 <section id="id2">
-<h2><span class="section-number">15.1. </span>Организационная структура команды<a class="headerlink" href="#id2" title="Ссылка на этот заголовок"></a></h2>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>graph TD
-    ED[Исполнительный директор&lt;br/&gt;Милов Максим]
-    
-    PO[Product Owner&lt;br/&gt;Кочемиров Сергей]
-    SALES1[Продажи&lt;br/&gt;Линников Олег]
-    SALES2[Продажи&lt;br/&gt;Исхаков Алмаз]
-    SALES3[Продажи&lt;br/&gt;Линникова Александра]
-    
-    POL[Политрук&lt;br/&gt;Мартынов Василий]
-    MET[Методолог&lt;br/&gt;Кожевников Никита]
-    TL[Тимлид&lt;br/&gt;Карлов Владислав]
-    
-    DEV1[Разработчик&lt;br/&gt;Каюмов Яков]
-    VOL[Волонтеры&lt;br/&gt;Разработчики]
-    
-    ED --&gt; PO
-    ED --&gt; SALES1
-    ED --&gt; SALES2
-    ED --&gt; SALES3
-    ED --&gt; POL
-    
-    PO --&gt; MET
-    MET --&gt; TL
-    
-    POL --&gt; VOL
-    TL --&gt; DEV1
-    TL --&gt; VOL
-    
-    classDef management fill:#e1f5fe
-    classDef business fill:#f3e5f5
-    classDef development fill:#e8f5e8
-    classDef onboarding fill:#fff3e0
-    classDef volunteers fill:#f1f8e9
-    
-    class ED management
-    class PO management
-    class SALES1,SALES2,SALES3 business
-    class MET,TL,DEV1 development
-    class POL onboarding
-    class VOL volunteers
-</pre></div>
-</div>
-</section>
-<hr class="docutils" />
-<section id="id3">
-<h2><span class="section-number">15.2. </span>Процессы взаимодействия ролей<a class="headerlink" href="#id3" title="Ссылка на этот заголовок"></a></h2>
-<div class="highlight-mermaid notranslate"><div class="highlight"><pre><span></span>flowchart LR
+<h2><span class="section-number">7.1. </span>Процессы взаимодействия ролей<a class="headerlink" href="#id2" title="Ссылка на этот заголовок"></a></h2>
+<pre  class="mermaid">
+        flowchart LR
     GOV[Государственные&lt;br/&gt;запросы]
     PO[Product Owner]
     MET[Методолог]
@@ -371,17 +218,15 @@
     class SALES business
     class VOL volunteers
     class CORE,DEV development
-</pre></div>
-</div>
-</section>
+    </pre></section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
-        <a href="3.7.html" class="btn btn-neutral float-left" title="14. 3.7 Стратегия продвижения продукта на рынок" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
-        <a href="4.2.html" class="btn btn-neutral float-right" title="16. 4.2. Опыт команды в реализации подобных проектов." accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="3.4.html" class="btn btn-neutral float-left" title="6. 3.4. Целевые сегменты потребителей создаваемого продукта и оценка платежеспособного спроса. Потенциальные клиенты (заказчики)" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="4.3.html" class="btn btn-neutral float-right" title="8. 4.3. Организационная структура управления. Схема привлечения новых специалистов." accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
@@ -404,7 +249,27 @@
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script> 
+  </script>
+ 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Найти все блоки с классом mermaid и инициализировать их
+        const mermaidBlocks = document.querySelectorAll('pre.mermaid');
+        mermaidBlocks.forEach(function(block) {
+            // Создать div элемент вместо pre
+            const div = document.createElement('div');
+            div.className = 'mermaid';
+            div.innerHTML = block.textContent;
+            
+            // Заменить pre на div
+            block.parentNode.replaceChild(div, block);
+        });
+        
+        // Перезапустить mermaid
+        mermaid.init();
+    });
+</script>
+
 
 </body>
 </html>

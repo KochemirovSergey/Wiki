@@ -1,0 +1,384 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ru" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>1. Текущий задел &mdash; документация Прогнозно-аналитическая ИИ система 1.0</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-2.3.0/datatables.min.css" />
+      <link rel="stylesheet" type="text/css" href="_static/custom.css?v=f8c9c462" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=9ca2116e"></script>
+      <script src="_static/doctools.js?v=9bcbadda"></script>
+      <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="_static/translations.js?v=cd1d70c9"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+      <script type="module">
+mermaid.initialize({
+    theme: 'default',
+    themeVariables: {
+        primaryColor: '#f39c12',
+        primaryTextColor: '#2c3e50',
+        primaryBorderColor: '#e74c3c',
+        lineColor: '#34495e',
+        secondaryColor: '#ecf0f1',
+        tertiaryColor: '#fff'
+    },
+    startOnLoad: true,
+    flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true
+    }
+});
+</script>
+      <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+      <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.2.0/dist/mermaid.esm.min.mjs";
+window.addEventListener("load", () => mermaid.run());
+</script>
+      <script src="https://cdn.datatables.net/v/dt/dt-2.3.0/datatables.min.js"></script>
+      <script src="_static/activate_datatables.js?v=eec09f64"></script>
+      <script src="_static/table-interactions.js?v=59f39348"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Алфавитный указатель" href="genindex.html" />
+    <link rel="search" title="Поиск" href="search.html" />
+    <link rel="next" title="2. План реализации проекта" href="plan.html" />
+    <link rel="prev" title="3. Академическое обоснование" href="academ.html" />
+ 
+<script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
+<script>
+    mermaid.initialize({
+        startOnLoad: true,
+        theme: 'default',
+        themeVariables: {
+            primaryColor: '#f39c12',
+            primaryTextColor: '#2c3e50',
+            primaryBorderColor: '#e74c3c',
+            lineColor: '#34495e',
+            secondaryColor: '#ecf0f1',
+            tertiaryColor: '#fff'
+        },
+        flowchart: {
+            useMaxWidth: true,
+            htmlLabels: true
+        }
+    });
+</script>
+
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Прогнозно-аналитическая ИИ система
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Поиск в документации" aria-label="Поиск в документации" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Меню навигации">
+              <p class="caption" role="heading"><span class="caption-text">Обзор системы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="naznachenie.html">1. Назначение системы (основные функции)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id2">1.1. Основные потребительские качества</a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id3">1.2. <strong>Анализ неструктурированных данных</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#neo4j">1.3. <strong>Графовая база данных Neo4j</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="naznachenie.html#id4">1.3.1. <strong>Построение полного индекса</strong> (на основе всех количественных данных в БД)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="naznachenie.html#id5">1.3.2. <strong>Прогнозная модель</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id6">1.4. <strong>Поиск количественных данных</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="naznachenie.html#id7">1.5. <strong>Анализ и рекомендации</strong></a><ul>
+<li class="toctree-l3"><a class="reference internal" href="naznachenie.html#id8">1.5.1. Архитектура мультиагентой ИИ системы</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="uses_case.html">2. Сценарии использования</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id2">2.1. Сценарий 1: Федеральное министерство планирует образовательную политику</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id3">2.2. Сценарий 2: Исследовательский консорциум проводит научный анализ</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id4">2.3. Сценарий 3: Региональное управление образованием оптимизирует ресурсы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id5">2.4. Сценарий 4: Образовательная организация развивает программы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id6">2.5. Сценарий 5: Гражданин ищет образовательные возможности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uses_case.html#id7">2.6. Аналоги</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="academ.html">3. Академическое обоснование</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="academ.html#id2">3.1. Показатели повышения точности и производительности</a></li>
+<li class="toctree-l2"><a class="reference internal" href="academ.html#id3">3.2. Конкретные исследования</a></li>
+<li class="toctree-l2"><a class="reference internal" href="academ.html#id4">3.3. Параметры системы</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Техническая реализация</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Текущий задел</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">1.1. Прототип 1 (общий) – основные функции</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">1.2. Прототип 2 – агент-аналитик</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id4">1.2.1. Сриншоты прототипа</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">1.3. Референсы по дашбордам</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="plan.html">2. План реализации проекта</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plan.html#id2">2.1. Долгосрочный план (2026-2029)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plan.html#id3">2.2. Среднесрочный план (2026-2027)</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Внутренние документы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="inhouse.html">Закрытый раздел</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id2">Процессы взаимодействия ролей</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id3">Схема ответственности и взаимодействия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="inhouse.html#id4">Волонтерская модель развития</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Справочные материалы</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="glossary.html">Глоссарий</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html#id2">Научные термины</a></li>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html#id5">Термины графовой БД</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="beautiful_tables.html">Примеры красивых таблиц</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id2">1. Базовая интерактивная таблица</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id3">2. Таблица с цветными статусами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id4">3. Сложная таблица с финансовыми показателями</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id5">4. Свертываемая таблица с техническими характеристиками</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id6">5. Таблица сравнения конкурентов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id7">6. Таблица с дорожной картой проекта</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id8">Инструкции по использованию</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id9">7. Таблица с расширенными фильтрами</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id10">8. Таблица с группировкой и сворачиванием строк</a></li>
+<li class="toctree-l2"><a class="reference internal" href="beautiful_tables.html#id11">9. Интерактивная таблица с поиском и множественными фильтрами</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Меню навигации для мобильных устройств" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Прогнозно-аналитическая ИИ система</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Навигация по страницам">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active"><span class="section-number">1. </span>Текущий задел</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/prototype.md.txt" rel="nofollow"> Просмотреть исходный код страницы</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="id1">
+<h1><span class="section-number">1. </span>Текущий задел<a class="headerlink" href="#id1" title="Ссылка на этот заголовок"></a></h1>
+<section id="id2">
+<h2><span class="section-number">1.1. </span>Прототип 1 (общий) – основные функции<a class="headerlink" href="#id2" title="Ссылка на этот заголовок"></a></h2>
+<p>Система анализа статистических форм представляет собой комплексную платформу для интеллектуального анализа образовательных данных Российской Федерации за период 2015-2024 годы. Прототип обеспечивает автоматизированную обработку статистических форм ОО-1 по всем 89 субъектам РФ, включая федеральные и региональные данные общим объемом около 10 лет статистической отчетности.</p>
+<p>Ключевой особенностью системы является интеграция современных технологий искусственного интеллекта с традиционными методами обработки данных. Telegram-бот с поддержкой больших языковых моделей (GPT-4o) позволяет пользователям делать естественно-языковые запросы к статистическим данным, получая интеллектуальные ответы с автоматическим поиском релевантной информации через <a class="reference internal" href="glossary.html#технологии-работы-с-данными"><span class="std std-ref">Neo4j</span></a> графовую базу данных или внешние источники. ETL-компонент обрабатывает сложные Excel-файлы с объединенными ячейками и многоуровневыми структурами, создавая узлы в графовой базе данных для последующего анализа.</p>
+<p>Веб-интерфейс системы предоставляет интерактивные карты России с региональными показателями и временные ряды данных через Flask Dashboard. Все компоненты координируются центральным System Coordinator. Архитектура построена на модульном принципе с поддержкой как локального, так и облачного развертывания через <a class="reference internal" href="glossary.html#технологии-работы-с-данными"><span class="std std-ref">Neo4j</span></a> Aura Cloud.
+Техническая документация:
+<a class="reference external" href="https://github.com/KochemirovSergey/stat_forms/tree/main/docs">https://github.com/KochemirovSergey/stat_forms/tree/main/docs</a></p>
+<pre  class="mermaid">
+        graph TB
+    %% Система координации
+    subgraph &quot;Система координации&quot;
+        COORD[System Coordinator&lt;br/&gt;CLI управление&lt;br/&gt;Health checks&lt;br/&gt;Graceful shutdown]
+    end
+
+    %% Пользовательские интерфейсы
+    subgraph &quot;Пользовательские интерфейсы&quot;
+        TGBOT[Telegram Bot&lt;br/&gt;Естественно-языковые запросы]
+        WEBAPP[Web Dashboard&lt;br/&gt;Интерактивные карты и графики]
+    end
+
+    %% Обработка запросов
+    subgraph &quot;Обработка запросов&quot;
+        LLM[LLM интеграция&lt;br/&gt;OpenAI GPT-4o&lt;br/&gt;LangChain&lt;br/&gt;Анализ запросов]
+    end
+
+    %% Визуализация
+    subgraph &quot;Визуализация&quot;
+        VIZ[Визуализация&lt;br/&gt;Plotly карты&lt;br/&gt;Временные ряды&lt;br/&gt;Региональная аналитика]
+    end
+
+    %% ETL процессы
+    subgraph &quot;ETL процессы&quot;
+        DATA[Исходные данные&lt;br/&gt;~850 Excel файлов&lt;br/&gt;2015-2024 годы&lt;br/&gt;89 регионов]
+        ETL[ETL компоненты&lt;br/&gt;Excel → CSV → Neo4j&lt;br/&gt;Федеральные данные&lt;br/&gt;Региональные данные]
+    end
+
+    %% Внешний поиск
+    subgraph &quot;Внешний поиск&quot;
+        TAVILY[Tavily Search&lt;br/&gt;Поиск в интернете&lt;br/&gt;Актуальная информация]
+    end
+
+    %% Данные и хранение
+    subgraph &quot;Данные и хранение&quot;
+        NEO4J[Neo4j Graph DB&lt;br/&gt;Сетевые узлы&lt;br/&gt;Расчетные узлы&lt;br/&gt;Региональные данные]
+        GEO[Геоданные&lt;br/&gt;russia_regions.parquet&lt;br/&gt;89 регионов РФ]
+    end
+
+    %% Связи координации
+    COORD --&gt; TGBOT
+    COORD --&gt; WEBAPP
+    COORD --&gt; ETL
+
+    %% Связи обработки
+    TGBOT --&gt; LLM
+    LLM --&gt; TAVILY
+    LLM --&gt; NEO4J
+    
+    %% Связи визуализации
+    WEBAPP --&gt; VIZ
+    VIZ --&gt; NEO4J
+    VIZ --&gt; GEO
+
+    %% Связи данных
+    DATA --&gt; ETL
+    ETL --&gt; NEO4J
+
+    %% Стили
+    classDef coordinator fill:#e8f5e8,stroke:#4caf50
+    classDef interface fill:#e3f2fd,stroke:#2196f3
+    classDef processing fill:#f3e5f5,stroke:#9c27b0
+    classDef visualization fill:#fff3e0,stroke:#ff9800
+    classDef data fill:#fce4ec,stroke:#e91e63
+    classDef search fill:#f1f8e9,stroke:#8bc34a
+    classDef storage fill:#fff8e1,stroke:#ffc107
+
+    class COORD coordinator
+    class TGBOT,WEBAPP interface
+    class LLM processing
+    class VIZ visualization
+    class DATA,ETL data
+    class TAVILY search
+    class NEO4J,GEO storage
+    </pre></section>
+<section id="id3">
+<h2><span class="section-number">1.2. </span>Прототип 2 – агент-аналитик<a class="headerlink" href="#id3" title="Ссылка на этот заголовок"></a></h2>
+<p>Новый прототип системы — это рефакторинг старой версии на базе фреймворка LangGraph. Теперь ключевые методы и обработчики из прежних монолитных модулей оформлены как отдельные инструменты (“tools”), которые интеллектуальный агент может вызывать по мере необходимости — например, для запроса онтологий, данных или генерации диаграмм. Введено общее типизированное состояние (OntologyState), позволяющее передавать результаты работы и вспомогательную информацию между узлами, что повышает прозрачность и управляемость всей логики.</p>
+<p>Что уже перенесено:</p>
+<ul class="simple">
+<li><p>Логика интеллектуального анализа и маршрутизации запросов пользователя (классификация запроса как количественного, образовательного или агентского).</p></li>
+<li><p>Доступ к базе <a class="reference internal" href="glossary.html#технологии-работы-с-данными"><span class="std std-ref">Neo4j</span></a> и инструменты для получения структуры онтологий и конкретных данных, генерация mermaid-диаграмм на лету.</p></li>
+<li><p>Работа с внешним поиском данных (например, Tavily).</p></li>
+<li><p>Централизованный контроль итераций и финальной агрегации результата в узле-оценщике.</p></li>
+</ul>
+<p>Что еще не перенесено:</p>
+<ul class="simple">
+<li><p>Интерактивные дашборды и визуализация на Flask/Plotly остаются в старой архитектуре и пока отсутствуют в LangGraph-прототипе.</p></li>
+<li><p>ETL-модули (парсинг и загрузка Excel) не интегрированы: в будущем этот слой будет выделен в отдельного агента-парсера, взаимодействующего с основным агентом.</p></li>
+<li><p>Telegram-бот и веб-интерфейс нового типа не реализованы.</p></li>
+<li><p>Нет региональной детализации и работы со всеми 89 субъектами РФ в этом прототипе.</p></li>
+</ul>
+<p>Таким образом, новый прототип — это модульное “ядро” для интеллектуальной логики и работы с онтологиями, с переносом инструментальных методов из старого монолита и закладкой основной архитектурной шины для интеграции будущих компонентов (ETL, дашборды, интерфейсы) в агентном формате.</p>
+<p>Техничексая документация:
+<a class="reference external" href="https://github.com/KochemirovSergey/agent_analitics">https://github.com/KochemirovSergey/agent_analitics</a></p>
+<section id="id4">
+<h3><span class="section-number">1.2.1. </span>Сриншоты прототипа<a class="headerlink" href="#id4" title="Ссылка на этот заголовок"></a></h3>
+<p><img alt="Архитектурная схема А3-5" src="_images/A3-5.png" /></p>
+<p><img alt="Детальная схема А3-4" src="_images/A3-4.png" /></p>
+</section>
+</section>
+<section id="id5">
+<h2><span class="section-number">1.3. </span>Референсы по дашбордам<a class="headerlink" href="#id5" title="Ссылка на этот заголовок"></a></h2>
+<p><a class="reference external" href="https://issekdash.hse.ru/viewer/public?dashboardGuid=f1b4484eecee40699e1036e6033125cb">https://issekdash.hse.ru/viewer/public?dashboardGuid=f1b4484eecee40699e1036e6033125cb</a>
+<a class="reference external" href="https://bi.gks.ru/biportal/contourbi.jsp?allsol=1&amp;amp;solution=Dashboard&amp;amp;project=%2FDashboard%2FStatistics_of_education_science_innovation_copy">https://bi.gks.ru/biportal/contourbi.jsp?allsol=1&amp;solution=Dashboard&amp;project=%2FDashboard%2FStatistics_of_education_science_innovation_copy</a>
+<a class="reference external" href="https://visjs.github.io/vis-network/examples/network/data/scalingCustom.html">https://visjs.github.io/vis-network/examples/network/data/scalingCustom.html</a>
+<a class="reference external" href="https://www.hse.ru/primarydata/io">https://www.hse.ru/primarydata/io</a></p>
+<p><img alt="Референс 1" src="_images/reference_1.png" />
+<img alt="Референс 2" src="_images/reference_2.png" />
+<img alt="Референс 3" src="_images/reference_3.png" />
+<img alt="Референс 4" src="_images/reference_4.png" />
+<img alt="Референс 5" src="_images/reference_5.png" />
+<img alt="Референс 6" src="_images/reference_6.png" />
+<img alt="Референс 7" src="_images/reference_7.png" />
+<img alt="Референс 8" src="_images/reference_8.png" />
+<img alt="Референс 9" src="_images/reference_9.png" />
+<img alt="Референс 10" src="_images/reference_10.png" />
+<img alt="Референс 11" src="_images/reference_11.png" /></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Нижняя область">
+        <a href="academ.html" class="btn btn-neutral float-left" title="3. Академическое обоснование" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Предыдущая</a>
+        <a href="plan.html" class="btn btn-neutral float-right" title="2. План реализации проекта" accesskey="n" rel="next">Следующая <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Авторские права 2025, СССО. </p>
+  </div>
+
+  Собрано при помощи <a href="https://www.sphinx-doc.org/">Sphinx</a> с использованием
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">темы,</a>
+    предоставленной <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+ 
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Найти все блоки с классом mermaid и инициализировать их
+        const mermaidBlocks = document.querySelectorAll('pre.mermaid');
+        mermaidBlocks.forEach(function(block) {
+            // Создать div элемент вместо pre
+            const div = document.createElement('div');
+            div.className = 'mermaid';
+            div.innerHTML = block.textContent;
+            
+            // Заменить pre на div
+            block.parentNode.replaceChild(div, block);
+        });
+        
+        // Перезапустить mermaid
+        mermaid.init();
+    });
+</script>
+
+
+</body>
+</html>

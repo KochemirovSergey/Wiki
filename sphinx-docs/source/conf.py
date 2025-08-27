@@ -18,8 +18,8 @@
 # -- Project information -----------------------------------------------------
 
 project = 'Прогнозно-аналитическая ИИ система'
-copyright = '2025, СТАРТЕХ БАЗА'
-author = 'СТАРТЕХ БАЗА'
+copyright = '2025, СССО'
+author = 'СССО'
 
 # The full version, including alpha/beta/rc tags
 release = '1.0'
@@ -38,6 +38,9 @@ extensions = [
     'sphinx.ext.intersphinx',
     'sphinx.ext.napoleon',
     'myst_parser',
+    'sphinxcontrib.mermaid',
+    'sphinxcontrib.jquery',
+    'sphinx_datatables',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -76,6 +79,9 @@ myst_enable_extensions = [
     "tasklist",
 ]
 
+# MyST parser fence configuration for mermaid
+myst_fence_as_directive = ["mermaid"]
+
 
 # -- Options for HTML output -------------------------------------------------
 
@@ -111,9 +117,13 @@ html_theme_options = {
     'titles_only': False
 }
 
-# Custom CSS
+# Custom CSS and JavaScript
 html_css_files = [
     'custom.css',
+]
+
+html_js_files = [
+    'table-interactions.js',
 ]
 
 # PDF output options
@@ -131,3 +141,29 @@ latex_documents = [
     ('index', 'sphinx-docs.tex', 'Прогнозно-аналитическая ИИ система',
      'СТАРТЕХ БАЗА', 'manual'),
 ]
+
+# -- Mermaid configuration --------------------------------------------------
+
+# Mermaid настройки
+mermaid_output_format = 'raw'
+mermaid_cmd = 'mmdc'
+mermaid_params = ['--theme', 'default', '--width', '1200', '--backgroundColor', 'transparent']
+
+mermaid_init_js = """
+mermaid.initialize({
+    theme: 'default',
+    themeVariables: {
+        primaryColor: '#f39c12',
+        primaryTextColor: '#2c3e50',
+        primaryBorderColor: '#e74c3c',
+        lineColor: '#34495e',
+        secondaryColor: '#ecf0f1',
+        tertiaryColor: '#fff'
+    },
+    startOnLoad: true,
+    flowchart: {
+        useMaxWidth: true,
+        htmlLabels: true
+    }
+});
+"""
